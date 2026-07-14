@@ -5,12 +5,12 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "서비스 — 8개 자산 영역 통합 자산관리",
+  title: "사업영역 — 8개 자산 영역 통합 자산관리",
   description:
-    "주식·펀드, 역외투자·해외금융, 퇴직연금, 채권·P2P, 스타트업, 비트코인, 부동산, 보험. 브릿지자산관리의 8개 자산 영역 통합 컨설팅 서비스를 확인하세요.",
+    "주식·펀드, 역외투자·해외금융, 퇴직연금, 채권·P2P, 스타트업, 비트코인, 부동산, 보험. 브릿지자산관리의 8개 사업영역 통합 컨설팅 서비스를 확인하세요.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "서비스 — 8개 자산 영역 통합 자산관리 | 브릿지자산관리",
+    title: "사업영역 — 8개 자산 영역 통합 자산관리 | 브릿지자산관리",
     description:
       "주식부터 보험까지 8개 자산 영역을 하나의 포트폴리오 관점에서 통합 설계합니다.",
   },

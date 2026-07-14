@@ -104,7 +104,7 @@ export function CtaSection({
             href="/services"
             className="rounded-md border border-white/30 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 transition-colors duration-200"
           >
-            서비스 둘러보기
+            사업영역 둘러보기
           </Link>
         </div>
       </div>

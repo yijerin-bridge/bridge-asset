@@ -79,7 +79,7 @@ export default function HomePage() {
               href="/services"
               className="rounded-md border border-white/30 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 transition-colors duration-200"
             >
-              서비스 보기
+              사업영역 보기
             </Link>
           </div>
 
@@ -216,7 +216,7 @@ export default function HomePage() {
               ))}
             </ul>
             <Link
-              href="/about"
+              href="/members/lee-jaerin"
               className="mt-8 inline-flex items-center gap-1 rounded-md bg-navy-950 px-5 py-3 text-sm font-semibold text-white hover:bg-navy-800 transition-colors duration-200"
             >
               대표 프로필 전체 보기

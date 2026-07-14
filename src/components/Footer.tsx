@@ -89,8 +89,8 @@ export default function Footer() {
                 ))}
               </ul>
             </nav>
-            <nav aria-label="서비스 메뉴">
-              <h2 className="text-sm font-semibold text-white">서비스</h2>
+            <nav aria-label="사업영역 메뉴">
+              <h2 className="text-sm font-semibold text-white">사업영역</h2>
               <ul className="mt-4 space-y-2">
                 {services.slice(0, 5).map((s) => (
                   <li key={s.slug}>

@@ -34,9 +34,9 @@ export const site = {
 
 export const nav = [
   { href: "/", label: "홈" },
-  { href: "/services", label: "서비스" },
-  { href: "/portfolio", label: "포트폴리오" },
-  { href: "/members", label: "멤버소개" },
   { href: "/about", label: "회사소개" },
+  { href: "/services", label: "사업영역" },
+  { href: "/members", label: "멤버소개" },
+  { href: "/portfolio", label: "포트폴리오" },
   { href: "/contact", label: "상담문의" },
 ] as const;

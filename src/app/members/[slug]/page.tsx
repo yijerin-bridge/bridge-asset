@@ -137,6 +137,11 @@ export default async function MemberDetailPage({ params }: Props) {
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
           <div>
+            {m.philosophy && (
+              <p className="mb-6 border-l-4 border-gold-500 pl-4 text-xl font-bold leading-snug text-navy-950">
+                &ldquo;{m.philosophy}&rdquo;
+              </p>
+            )}
             <h2 className="text-lg font-bold text-navy-950">소개</h2>
             <div className="mt-4 space-y-3 text-base leading-relaxed text-slate-700">
               {m.intro.map((p, i) => (
@@ -147,6 +152,25 @@ export default async function MemberDetailPage({ params }: Props) {
             {m.lectures && (
               <div className="mt-10">
                 <InfoBlock title="강의" items={m.lectures} />
+              </div>
+            )}
+
+            {m.media && (
+              <div className="mt-10">
+                <h2 className="text-lg font-bold text-navy-950">방송</h2>
+                <ul className="mt-4 space-y-2">
+                  {m.media.map((x) => (
+                    <li
+                      key={x.title}
+                      className="flex items-start gap-3 text-sm text-slate-700"
+                    >
+                      <span className="mt-0.5 shrink-0 font-semibold text-gold-600">
+                        {x.year}
+                      </span>
+                      {x.title}
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
 
