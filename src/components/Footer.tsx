@@ -36,15 +36,14 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-12">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <p className="flex items-center gap-3">
+            <p>
               <Image
-                src="/images/logo.png"
-                alt={`${site.nameEn} 로고`}
-                width={40}
-                height={40}
-                className="h-10 w-10 object-contain"
+                src="/images/logo-full.png"
+                alt={site.name}
+                width={190}
+                height={160}
+                className="h-20 w-auto brightness-0 invert"
               />
-              <span className="font-bold text-white text-lg">{site.name}</span>
             </p>
             <p className="mt-4 text-sm leading-relaxed text-slate-400">
               {site.tagline}. 증권·부동산·스타트업·보험을 아우르는 종합 자산관리

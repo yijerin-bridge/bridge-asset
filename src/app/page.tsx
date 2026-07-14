@@ -50,11 +50,11 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-24 sm:py-32">
           <p className="flex items-center gap-3 text-sm font-semibold uppercase tracking-widest text-gold-400">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-mark.png"
               alt=""
-              width={36}
-              height={36}
-              className="h-9 w-9 object-contain"
+              width={112}
+              height={45}
+              className="h-8 w-auto brightness-0 invert"
               priority
             />
             {site.nameEn}

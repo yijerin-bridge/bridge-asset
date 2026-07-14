@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { nav, site } from "@/lib/site";
 
@@ -15,13 +16,18 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 shrink-0"
+            className="flex items-center gap-2.5 shrink-0"
             aria-label={`${site.name} 홈으로`}
             onClick={() => setOpen(false)}
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-950 text-gold-400 font-bold text-lg">
-              B
-            </span>
+            <Image
+              src="/images/logo-mark.png"
+              alt=""
+              width={112}
+              height={45}
+              className="h-9 w-auto"
+              priority
+            />
             <span className="font-bold text-lg text-navy-950 tracking-tight">
               브릿지<span className="text-gold-600">자산관리</span>
             </span>
