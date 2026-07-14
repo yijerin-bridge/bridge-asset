@@ -101,8 +101,8 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <SectionHeading
           eyebrow="Our Mission"
-          title="문제를 피하지 않는 자산관리"
-          description="고객의 경제적 자유, 신뢰 기반의 금융, 그리고 양극화 해소에 기여하는 것. 브릿지자산관리가 존재하는 이유입니다."
+          title="평생 함께하는 자산관리 파트너"
+          description="판매가 아닌 성과로, 고객의 자산을 오랜 시간 곁에서 관리합니다. 고객의 경제적 자유와 신뢰 기반의 금융이 브릿지자산관리가 존재하는 이유입니다."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
