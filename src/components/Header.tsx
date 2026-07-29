@@ -28,8 +28,9 @@ export default function Header() {
               className="h-9 w-auto"
               priority
             />
-            <span className="font-bold text-lg text-navy-950 tracking-tight">
-              브릿지<span className="text-gold-600">자산관리</span>
+            <span className="font-bold text-sm sm:text-base text-navy-950 tracking-tight leading-tight">
+              Bridge Asset Management{" "}
+              <span className="text-gold-600">Inc.</span>
             </span>
           </Link>
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { funds, products, angelInvestments } from "@/lib/portfolio";
+import { funds, products } from "@/lib/portfolio";
 import { SectionHeading, CtaSection } from "@/components/ui";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
@@ -127,30 +127,6 @@ export default function PortfolioPage() {
       </section>
 
       {/* 엔젤 투자 */}
-      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
-        <SectionHeading
-          align="left"
-          eyebrow="Angel & LP"
-          title="개인 엔젤·LP 투자"
-          description="크라우드펀딩부터 Pre-IPO 구주까지, 다양한 단계의 스타트업에 투자하고 있습니다."
-        />
-        <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {angelInvestments.map((a) => (
-            <li
-              key={a.name}
-              className="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 shadow-sm"
-            >
-              <span className="font-semibold text-navy-950">{a.name}</span>
-              <span className="text-xs text-slate-500 text-right">{a.note}</span>
-            </li>
-          ))}
-        </ul>
-        <p className="mt-6 text-sm text-slate-500">
-          이 외에도 다수의 투자 건이 있습니다. 과거의 투자 성과가 미래의 수익을
-          보장하지 않습니다.
-        </p>
-      </section>
-
       <CtaSection
         title="스타트업 투자, 함께 시작하세요"
         description="개인투자조합 참여와 엔젤투자 소득공제까지, 비상장 투자의 처음부터 끝까지 안내합니다."

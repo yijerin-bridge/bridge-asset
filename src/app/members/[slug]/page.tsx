@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { site } from "@/lib/site";
 import { members, getMember } from "@/lib/members";
+import { funds, angelInvestments } from "@/lib/portfolio";
 import { CtaSection } from "@/components/ui";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
@@ -210,6 +211,61 @@ export default async function MemberDetailPage({ params }: Props) {
             </div>
           </div>
         </div>
+
+        {/* 투자 포트폴리오 (대표 전용) */}
+        {m.ceo && (
+          <div className="mt-16 border-t border-slate-200 pt-16">
+            <h2 className="text-2xl font-bold text-navy-950">투자 포트폴리오</h2>
+            <p className="mt-2 text-sm text-slate-600">
+              개인투자조합 GP·CO-GP로 운용 중인 투자와 개인 엔젤·LP 투자입니다.
+            </p>
+
+            <h3 className="mt-8 text-sm font-semibold uppercase tracking-widest text-gold-600">
+              투자조합 운용 (GP / CO-GP / LP)
+            </h3>
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {funds.map((f) => (
+                <li
+                  key={f.name}
+                  className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <span className="font-semibold text-navy-950">{f.name}</span>
+                    {f.highlight && (
+                      <span className="shrink-0 rounded-full bg-gold-100 px-2 py-0.5 text-[11px] font-semibold text-gold-600">
+                        {f.highlight}
+                      </span>
+                    )}
+                  </div>
+                  <p className="mt-1 text-xs text-slate-500">
+                    {f.date} 투자 · {f.role}
+                  </p>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="mt-10 text-sm font-semibold uppercase tracking-widest text-gold-600">
+              개인 엔젤·LP 투자
+            </h3>
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {angelInvestments.map((a) => (
+                <li
+                  key={a.name}
+                  className="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 shadow-sm"
+                >
+                  <span className="font-semibold text-navy-950">{a.name}</span>
+                  <span className="text-right text-xs text-slate-500">
+                    {a.note}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm text-slate-500">
+              이 외에도 다수의 투자 건이 있습니다. 과거의 투자 성과가 미래의
+              수익을 보장하지 않습니다.
+            </p>
+          </div>
+        )}
 
         {/* Other members */}
         <div className="mt-16">
