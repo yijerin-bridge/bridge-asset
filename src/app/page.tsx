@@ -216,7 +216,7 @@ export default function HomePage() {
               ))}
             </ul>
             <Link
-              href="/members/lee-jaerin"
+              href="/members/yi-jaerin"
               className="mt-8 inline-flex items-center gap-1 rounded-md bg-navy-950 px-5 py-3 text-sm font-semibold text-white hover:bg-navy-800 transition-colors duration-200"
             >
               대표 프로필 전체 보기

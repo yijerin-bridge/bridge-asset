@@ -18,9 +18,9 @@ export type Member = {
 // bridgeasset.creatorlink.net 멤버소개 + 개인 상세 페이지 기준
 export const members: Member[] = [
   {
-    slug: "lee-jaerin",
+    slug: "yi-jaerin",
     name: "이재린",
-    nameEn: "Yi Jae-rin",
+    nameEn: "Yi Jaerin",
     role: "대표이사 / CEO",
     quote: "더 나은 삶의 가능성을 열어가는 길을 안내하고자 합니다.",
     image: "/images/members/lee-jaerin.jpg",
