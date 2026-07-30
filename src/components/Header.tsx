@@ -29,8 +29,7 @@ export default function Header() {
               priority
             />
             <span className="font-bold text-sm sm:text-base text-navy-950 tracking-tight leading-tight">
-              Bridge Asset Management{" "}
-              <span className="text-gold-600">Inc.</span>
+              Bridge Asset Management Inc.
             </span>
           </Link>
 
