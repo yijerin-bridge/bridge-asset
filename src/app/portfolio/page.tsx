@@ -58,13 +58,21 @@ export default function PortfolioPage() {
               className="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
             >
               <div className="relative aspect-[3/2] overflow-hidden bg-slate-100">
-                <Image
-                  src={f.image}
-                  alt={`${f.name} 투자 이미지`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                {f.image ? (
+                  <Image
+                    src={f.image}
+                    alt={`${f.name} 투자 이미지`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-navy-950">
+                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold-500">
+                      Coming Soon
+                    </span>
+                  </div>
+                )}
                 {f.highlight && (
                   <span className="absolute left-3 top-3 rounded-full bg-gold-500 px-2.5 py-1 text-xs font-bold text-navy-950 shadow">
                     {f.highlight}
@@ -74,7 +82,9 @@ export default function PortfolioPage() {
               <div className="flex flex-1 flex-col p-5">
                 <h3 className="font-bold text-navy-950 leading-snug">{f.name}</h3>
                 <p className="mt-1 text-xs font-medium text-gold-600">
-                  {f.date} 투자 ({f.role})
+                  {f.status === "preparing"
+                    ? `${f.date} · ${f.role}`
+                    : `${f.date} 투자 (${f.role})`}
                 </p>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
                   {f.desc}

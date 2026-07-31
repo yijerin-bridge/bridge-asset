@@ -238,7 +238,9 @@ export default async function MemberDetailPage({ params }: Props) {
                     )}
                   </div>
                   <p className="mt-1 text-xs text-slate-500">
-                    {f.date} 투자 · {f.role}
+                    {f.status === "preparing"
+                      ? `${f.date} · ${f.role}`
+                      : `${f.date} 투자 · ${f.role}`}
                   </p>
                 </li>
               ))}

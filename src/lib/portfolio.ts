@@ -3,8 +3,11 @@ export type Fund = {
   date: string;
   role: string;
   desc: string;
-  image: string;
+  /** 결성 준비중인 조합은 생략 가능. 없으면 플레이스홀더가 표시됩니다. */
+  image?: string;
   highlight?: string;
+  /** 결성 준비중이면 "투자" 표기 대신 준비중으로 렌더링합니다. */
+  status?: "preparing";
 };
 
 export type Product = {
@@ -30,6 +33,13 @@ export const funds: Fund[] = [
     role: "GP",
     desc: "인공지능 이상탐지 기술을 통한 영상분석(AI CCTV)과 빅데이터 솔루션을 제공하는 기업입니다.",
     image: "/images/fund-bridge-innovation-2.png",
+  },
+  {
+    name: "Bridge Innovation No.3",
+    date: "결성 준비중",
+    role: "GP",
+    status: "preparing",
+    desc: "결성을 준비하고 있는 개인투자조합입니다. 참여를 원하시면 연락처 페이지를 통해 문의해 주시기 바랍니다.",
   },
   {
     name: "Bridge Innovation No.4",
