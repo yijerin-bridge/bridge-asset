@@ -26,9 +26,10 @@ export const site = {
     notion: "https://bridgekr.notion.site/218633c4f19880fdaf41f6da1fd5f727",
   },
   verification: {
-    // 발급받은 코드로 교체하세요: 구글 서치콘솔 / 네이버 서치어드바이저
-    google: "GOOGLE_SITE_VERIFICATION_CODE",
-    naver: "NAVER_SITE_VERIFICATION_CODE",
+    google: "JfpKIAzx0D_JeCtYTAxQy6hyE4GCis8iVLxwFwXhhwk",
+    // 네이버 서치어드바이저 > 소유확인 > HTML 태그의 content 값을 넣으세요.
+    // 비워두면 메타 태그 자체가 출력되지 않습니다.
+    naver: "",
   },
 } as const;
 

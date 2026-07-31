@@ -66,7 +66,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: site.verification.google,
-    other: { "naver-site-verification": site.verification.naver },
+    ...(site.verification.naver
+      ? { other: { "naver-site-verification": site.verification.naver } }
+      : {}),
   },
 };
 
