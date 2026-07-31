@@ -27,9 +27,7 @@ export const site = {
   },
   verification: {
     google: "JfpKIAzx0D_JeCtYTAxQy6hyE4GCis8iVLxwFwXhhwk",
-    // 네이버 서치어드바이저 > 소유확인 > HTML 태그의 content 값을 넣으세요.
-    // 비워두면 메타 태그 자체가 출력되지 않습니다.
-    naver: "",
+    naver: "0db20cc858bf5d3b9483e986b593901f94f87dab",
   },
 } as const;
 
