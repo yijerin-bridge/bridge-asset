@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: a.description,
     keywords: a.keywords,
     alternates: { canonical: `/insights/${a.slug}` },
+    robots: a.status === "draft" ? { index: false, follow: false } : undefined,
     openGraph: {
       type: "article",
       title: `${a.title} | 브릿지자산관리`,

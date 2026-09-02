@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 import { services } from "@/lib/services";
 import { members } from "@/lib/members";
-import { insights } from "@/lib/insights";
+import { publishedInsights } from "@/lib/insights";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const insightPages: MetadataRoute.Sitemap = insights.map((i) => ({
+  const insightPages: MetadataRoute.Sitemap = publishedInsights.map((i) => ({
     url: `${site.url}/insights/${i.slug}`,
     lastModified: new Date(i.updated ?? i.date),
     changeFrequency: "monthly",

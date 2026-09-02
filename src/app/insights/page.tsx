@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { insights } from "@/lib/insights";
+import { publishedInsights } from "@/lib/insights";
 import { SectionHeading, CtaSection } from "@/components/ui";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function InsightsPage() {
-  const sorted = [...insights].sort((a, b) => b.date.localeCompare(a.date));
+  const sorted = [...publishedInsights].sort((a, b) => b.date.localeCompare(a.date));
   return (
     <>
       <JsonLd

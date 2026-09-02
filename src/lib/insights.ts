@@ -21,6 +21,7 @@ export type Insight = {
   keywords: string[];
   date: string;
   updated?: string;
+  status?: "published" | "draft"; // 미지정 = published
   lead: string;
   sections: InsightSection[];
   faqs: { q: string; a: string }[];
@@ -159,6 +160,13 @@ export const insights: Insight[] = [
   },
 ];
 
+export const publishedInsights = insights.filter((i) => i.status !== "draft");
+export const draftInsights = insights.filter((i) => i.status === "draft");
+
 export function getInsight(slug: string) {
   return insights.find((i) => i.slug === slug);
+}
+
+export function isDraft(slug: string) {
+  return getInsight(slug)?.status === "draft";
 }

@@ -2,7 +2,7 @@ import { site } from "@/lib/site";
 import { services } from "@/lib/services";
 import { members } from "@/lib/members";
 import { funds, angelInvestments } from "@/lib/portfolio";
-import { insights } from "@/lib/insights";
+import { publishedInsights } from "@/lib/insights";
 
 // llms.txt — AI(ChatGPT·Perplexity·Claude·네이버 AI)가 읽는 사이트 안내서.
 // 사이트 데이터에서 자동 생성되어 항상 최신 상태로 유지됩니다.
@@ -57,7 +57,7 @@ ${(ceo.lectures ?? []).map((l) => `- ${l}`).join(nl)}
 ${(ceo.media ?? []).map((m) => `- ${m.year} ${m.title}`).join(nl)}
 
 ## 인사이트 (자산관리 콘텐츠)
-${insights.map((i) => `- [${i.title}](${u}/insights/${i.slug}): ${i.description}`).join(nl)}
+${publishedInsights.map((i) => `- [${i.title}](${u}/insights/${i.slug}): ${i.description}`).join(nl)}
 
 ## 데이터 정책
 - 출처: ${site.name} 공식 정보 및 대표 이재린 이력 기반 자체 게시
