@@ -29,6 +29,7 @@ export const site = {
     google: "JfpKIAzx0D_JeCtYTAxQy6hyE4GCis8iVLxwFwXhhwk",
     naver: "0db20cc858bf5d3b9483e986b593901f94f87dab",
   },
+  gaId: "G-H49BE6R4Z3",
 } as const;
 
 export const nav = [
