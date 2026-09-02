@@ -23,6 +23,7 @@ export type Insight = {
   updated?: string;
   status?: "published" | "draft"; // 미지정 = published
   lead: string;
+  heroImage?: { src: string; alt: string };
   sections: InsightSection[];
   faqs: { q: string; a: string }[];
 };
@@ -46,6 +47,10 @@ export const insights: Insight[] = [
     ],
     date: "2026-09-02",
     lead: "역외보험은 홍콩·싱가포르 등 해외 보험사가 판매하는 달러(외화) 기반 저축성 보험으로, 장기 달러 자산 축적과 상속·증여 설계에 활용됩니다.",
+    heroImage: {
+      src: "/images/insights/hero-dollar-asset.svg",
+      alt: "달러 자산 성장 개념 이미지 — 홍콩·미국 역외보험으로 달러 자산을 쌓는 흐름",
+    },
     sections: [
       {
         heading: "역외보험이란",
@@ -56,6 +61,11 @@ export const insights: Insight[] = [
       },
       {
         heading: "왜 '달러 자산'으로 접근하나",
+        image: {
+          src: "/images/insights/currency-diversification.svg",
+          alt: "통화 분산 개념 — 원화 자산에 달러 자산을 더해 통화를 나눈다",
+          caption: "통화 분산 — 원화에 달러를 더하면 한쪽 통화가 흔들려도 전체 변동이 줄어듭니다.",
+        },
         paragraphs: [
           "역외보험을 단순한 보험이 아니라 '달러 자산의 한 형태'로 보면 이해가 쉽습니다. 자산의 일부를 달러로 보유하면 원화 가치가 하락하거나 국내 경제가 흔들릴 때 자산 전체의 변동을 완화할 수 있습니다. 이를 통화 분산이라고 합니다.",
           "특히 노후 자금이나 상속 재원처럼 '오래 두고 다음 단계로 넘길 돈'은 통화를 분산해 두는 편이 유리한 경우가 많습니다. 역외보험은 장기 납입·거치 구조라 이런 목적과 성격이 잘 맞습니다.",

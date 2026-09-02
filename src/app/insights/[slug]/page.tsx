@@ -99,6 +99,13 @@ export default async function InsightPage({ params }: Props) {
 
         {/* Body */}
         <div className="mx-auto max-w-3xl px-4 sm:px-6 py-14">
+          {a.heroImage && (
+            <figure className="mb-8 overflow-hidden rounded-2xl border border-slate-200">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={a.heroImage.src} alt={a.heroImage.alt} className="w-full" />
+            </figure>
+          )}
+
           {/* 직답 */}
           <p className="border-l-4 border-gold-500 bg-navy-50 p-5 text-lg font-medium leading-relaxed text-navy-950">
             {a.lead}

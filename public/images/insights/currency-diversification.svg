@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" font-family="'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="1000" height="420" rx="20" fill="#f8fafc"/>
+  <rect x="0.5" y="0.5" width="999" height="419" rx="20" fill="none" stroke="#e2e8f0"/>
+  <text x="500" y="56" text-anchor="middle" font-size="26" font-weight="700" fill="#0f2038">통화 분산 — 원화에 달러를 더한다</text>
+  <text x="500" y="86" text-anchor="middle" font-size="14" fill="#64748b">한 통화에 몰린 자산을 나누면, 한쪽이 흔들려도 전체 변동이 줄어듭니다</text>
+
+  <!-- 원화 스택 -->
+  <g>
+    <ellipse cx="300" cy="330" rx="120" ry="26" fill="#2c4f7c"/>
+    <rect x="180" y="270" width="240" height="60" fill="#2c4f7c"/>
+    <ellipse cx="300" cy="270" rx="120" ry="26" fill="#3a5f8f"/>
+    <rect x="180" y="220" width="240" height="50" fill="#3a5f8f"/>
+    <ellipse cx="300" cy="220" rx="120" ry="26" fill="#4a6fa0"/>
+    <text x="300" y="228" text-anchor="middle" font-size="34" font-weight="700" fill="#ffffff">₩</text>
+    <text x="300" y="386" text-anchor="middle" font-size="16" font-weight="600" fill="#16304f">원화 자산</text>
+  </g>
+
+  <!-- plus -->
+  <text x="500" y="290" text-anchor="middle" font-size="44" font-weight="300" fill="#94a3b8">+</text>
+
+  <!-- 달러 스택 -->
+  <g>
+    <ellipse cx="700" cy="330" rx="120" ry="26" fill="#b8860b"/>
+    <rect x="580" y="250" width="240" height="80" fill="#b8860b"/>
+    <ellipse cx="700" cy="250" rx="120" ry="26" fill="#ca8a04"/>
+    <rect x="580" y="195" width="240" height="55" fill="#ca8a04"/>
+    <ellipse cx="700" cy="195" rx="120" ry="26" fill="#d9a406"/>
+    <text x="700" y="204" text-anchor="middle" font-size="34" font-weight="700" fill="#ffffff">$</text>
+    <text x="700" y="386" text-anchor="middle" font-size="16" font-weight="600" fill="#16304f">달러 자산</text>
+  </g>
+</svg>
