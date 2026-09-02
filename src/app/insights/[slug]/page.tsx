@@ -102,7 +102,7 @@ export default async function InsightPage({ params }: Props) {
           {a.heroImage && (
             <figure className="mb-8 overflow-hidden rounded-2xl border border-slate-200">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={a.heroImage.src} alt={a.heroImage.alt} className="w-full" />
+              <img src={a.heroImage.src} alt={a.heroImage.alt} className="aspect-[16/7] w-full object-cover" />
             </figure>
           )}
 
