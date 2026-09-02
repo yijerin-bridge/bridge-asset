@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="1000" height="600" rx="20" fill="#f8fafc"/>
+  <rect x="0.5" y="0.5" width="999" height="599" rx="20" fill="none" stroke="#e2e8f0"/>
+
+  <text x="500" y="58" text-anchor="middle" font-size="30" font-weight="700" fill="#0f2038">브릿지자산관리 자산배분 체계</text>
+  <text x="500" y="90" text-anchor="middle" font-size="15" fill="#64748b">국내 제도의 혜택을 먼저 활용하고, 그 위에 역외 자산으로 보완합니다</text>
+
+  <!-- Panel A: 국내 제도 -->
+  <rect x="56" y="130" width="420" height="270" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="80" y="156" width="4" height="20" rx="2" fill="#ca8a04"/>
+  <text x="96" y="173" font-size="19" font-weight="700" fill="#16304f">국내 제도 활용</text>
+
+  <rect x="80" y="196" width="372" height="56" rx="12" fill="#eef3f9" stroke="#dbe4f0"/>
+  <text x="100" y="223" font-size="16" font-weight="600" fill="#16304f">비과세 보험</text>
+  <text x="100" y="242" font-size="12.5" fill="#64748b">세금 없이 굴리는 장기 자산</text>
+
+  <rect x="80" y="262" width="372" height="56" rx="12" fill="#eef3f9" stroke="#dbe4f0"/>
+  <text x="100" y="289" font-size="16" font-weight="600" fill="#16304f">IRP · 연금저축</text>
+  <text x="100" y="308" font-size="12.5" fill="#64748b">세액공제 혜택</text>
+
+  <rect x="80" y="328" width="372" height="56" rx="12" fill="#eef3f9" stroke="#dbe4f0"/>
+  <text x="100" y="355" font-size="16" font-weight="600" fill="#16304f">벤처투자</text>
+  <text x="100" y="374" font-size="12.5" fill="#64748b">소득공제 혜택</text>
+
+  <!-- Panel B: 역외 보험 -->
+  <rect x="524" y="130" width="420" height="270" rx="16" fill="#0f2038"/>
+  <rect x="548" y="156" width="4" height="20" rx="2" fill="#ca8a04"/>
+  <text x="564" y="173" font-size="19" font-weight="700" fill="#ffffff">역외 보험 · 달러 자산</text>
+
+  <rect x="548" y="196" width="372" height="84" rx="12" fill="#16304f"/>
+  <text x="568" y="224" font-size="16" font-weight="700" fill="#d9a406">홍콩</text>
+  <text x="612" y="224" font-size="14" font-weight="600" fill="#ffffff">자산 이전 · 승계에 강함</text>
+  <text x="568" y="252" font-size="12.5" fill="#cbd5e1">유배당 구조 · 계약 이전 · 증권 분할로</text>
+  <text x="568" y="270" font-size="12.5" fill="#cbd5e1">다음 세대로 자산 승계</text>
+
+  <rect x="548" y="290" width="372" height="94" rx="12" fill="#16304f"/>
+  <text x="568" y="318" font-size="16" font-weight="700" fill="#d9a406">미국</text>
+  <text x="612" y="318" font-size="14" font-weight="600" fill="#ffffff">모으고 · 지키고 · 불리고</text>
+  <text x="568" y="346" font-size="12.5" fill="#cbd5e1">지수 연동으로 불리면서 원금 손실 방지,</text>
+  <text x="568" y="364" font-size="12.5" fill="#cbd5e1">사망보험금까지 함께 확보</text>
+
+  <!-- Arrow -->
+  <path d="M500 400 L500 436" stroke="#ca8a04" stroke-width="3"/>
+  <path d="M500 448 L490 432 L510 432 Z" fill="#ca8a04"/>
+
+  <!-- Bottom bar -->
+  <rect x="250" y="462" width="500" height="76" rx="16" fill="#0f2038"/>
+  <text x="500" y="500" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">고객 상황에 맞춘 맞춤형 자산배분</text>
+  <text x="500" y="524" text-anchor="middle" font-size="13" fill="#94a3b8">노후 · 상속 · 통화 분산 목표에 따라 비중을 설계</text>
+
+  <text x="500" y="576" text-anchor="middle" font-size="12.5" fill="#94a3b8">※ 위 구성은 예시이며 개인 자산·목표에 따라 달라집니다.</text>
+</svg>

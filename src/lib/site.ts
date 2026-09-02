@@ -38,5 +38,6 @@ export const nav = [
   { href: "/services", label: "사업영역" },
   { href: "/members", label: "멤버소개" },
   { href: "/portfolio", label: "포트폴리오" },
+  { href: "/insights", label: "인사이트" },
   { href: "/contact", label: "상담문의" },
 ] as const;

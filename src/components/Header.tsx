@@ -33,7 +33,7 @@ export default function Header() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-1" aria-label="주 메뉴">
+          <nav className="hidden lg:flex items-center gap-1" aria-label="주 메뉴">
             {nav.map((item) => {
               const active =
                 item.href === "/"
@@ -63,7 +63,7 @@ export default function Header() {
 
           <button
             type="button"
-            className="md:hidden flex h-11 w-11 items-center justify-center rounded-md text-navy-950 hover:bg-slate-100 cursor-pointer"
+            className="lg:hidden flex h-11 w-11 items-center justify-center rounded-md text-navy-950 hover:bg-slate-100 cursor-pointer"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "메뉴 닫기" : "메뉴 열기"}
@@ -90,7 +90,7 @@ export default function Header() {
       {open && (
         <nav
           id="mobile-menu"
-          className="md:hidden border-t border-slate-200 bg-white px-4 pb-4 pt-2"
+          className="lg:hidden border-t border-slate-200 bg-white px-4 pb-4 pt-2"
           aria-label="모바일 메뉴"
         >
           {nav.map((item) => (
