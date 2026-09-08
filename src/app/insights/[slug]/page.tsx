@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { site } from "@/lib/site";
-import { insights, getInsight } from "@/lib/insights";
+import { insights, publishedInsights, getInsight } from "@/lib/insights";
 import { CtaSection } from "@/components/ui";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, faqJsonLd } from "@/lib/jsonld";
@@ -38,7 +38,7 @@ export default async function InsightPage({ params }: Props) {
   const a = getInsight(slug);
   if (!a) notFound();
 
-  const others = insights.filter((x) => x.slug !== a.slug).slice(0, 2);
+  const others = publishedInsights.filter((x) => x.slug !== a.slug).slice(0, 2);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
