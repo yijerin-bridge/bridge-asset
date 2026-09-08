@@ -31,6 +31,7 @@ export type Insight = {
 export const insights: Insight[] = [
   {
     slug: "offshore-insurance-policyholder-change-gift-tax",
+    heroImage: { src: "/images/insights/library/hongkong.jpg", alt: "홍콩 스카이라인 — 글로벌 금융 허브" },
     title: "역외보험 계약자(명의) 변경, 자녀에게 물려주면 증여세를 내나요?",
     description:
       "역외보험 계약자를 자녀 명의로 바꾸면 그 시점에 바로 증여세가 나오는지, 나중에 보험금을 받을 때 문제가 되는지 헷갈리는 분이 많습니다. 계약자 변경과 증여세의 관계, 실질 납입자 기준으로 과세되는 구조, 유의점을 정리했습니다.",
@@ -131,6 +132,7 @@ export const insights: Insight[] = [
   },
   {
     slug: "offshore-insurance-insurer-safety-bankruptcy",
+    heroImage: { src: "/images/insights/library/finance-district.webp", alt: "글로벌 금융가 마천루 — 보험사 재무 건전성" },
     title: "역외보험 가입한 보험사가 파산하면 내 돈은 어떻게 되나요? — 보험사 안전성 확인법",
     description:
       "역외보험은 국내 예금자보호 대상이 아니기 때문에, 가입한 보험사가 파산할 경우 내 자산이 어떻게 되는지 궁금해하는 분들이 많습니다. 국내 예금자보호와의 차이, 보험사 안전성을 확인하는 방법, 가입 전 반드시 점검해야 할 사항을 정리했습니다.",
@@ -231,6 +233,7 @@ export const insights: Insight[] = [
   },
   {
     slug: "offshore-insurance-eligibility-how-to-join",
+    heroImage: { src: "/images/insights/library/singapore.webp", alt: "싱가포르 스카이라인 — 해외 금융 허브" },
     title: "역외보험, 아무나 가입할 수 있나요? 가입 자격·절차 총정리",
     description:
       "역외보험은 관심이 있다고 아무나, 아무 경로로나 가입할 수 있는 상품이 아닙니다. 거주자 요건, 정식 판매 자격을 갖춘 상담 경로, 실제 가입 절차와 필요 서류, 그리고 무자격 경로로 가입했을 때의 위험까지 정리했습니다.",
@@ -331,6 +334,7 @@ export const insights: Insight[] = [
   },
   {
     slug: "gift-vs-inheritance-tax-comparison",
+    heroImage: { src: "/images/insights/library/document-signing.webp", alt: "서류에 서명하는 모습 — 증여·상속 설계" },
     title: "사전증여와 상속, 세금은 뭐가 더 유리할까요? — 증여세·상속세 비교",
     description:
       "사전증여와 상속 중 어느 쪽이 유리한지는 재산 규모, 남은 시간, 가족 구성에 따라 달라 일률적으로 답할 수 없습니다. 증여세와 상속세의 계산 구조 차이, 10년 합산과세 규정, 각각의 장단점을 정리했습니다.",
@@ -432,6 +436,7 @@ export const insights: Insight[] = [
   },
   {
     slug: "angel-investment-income-tax-deduction",
+    heroImage: { src: "/images/insights/library/business-meeting.webp", alt: "비즈니스 미팅 — 스타트업 투자" },
     title: "엔젤투자 소득공제 받는 방법 — 조건·투자경로·신청절차 총정리",
     description:
       "엔젤투자로 소득공제를 받으려면 개인이 직접 아는 회사에 투자한다고 되는 것이 아니라, 정해진 투자 경로(개인투자조합, 엔젤투자 매칭펀드, 크라우드펀딩 등)를 통해야 합니다. 소득공제 구조와 투자 경로, 세금·유의점을 정리했습니다.",
@@ -532,6 +537,7 @@ export const insights: Insight[] = [
   },
   {
     slug: "dollar-annuity-pension-guide",
+    heroImage: { src: "/images/insights/library/dollar.webp", alt: "미국 달러 지폐 — 달러 연금 자산" },
     title: "달러연금이란? 연금 개시·수령 방법과 세금까지 총정리",
     description:
       "달러연금은 역외 보험사의 달러 기반 상품으로 노후자금을 적립한 뒤 연금 형태로 수령하는 구조입니다. 적립·거치·연금개시 단계별 구조, 수령 방식, 세금·신고 이슈, 유의점까지 정리했습니다.",
@@ -633,6 +639,7 @@ export const insights: Insight[] = [
   },
   {
     slug: "offshore-insurance-surrender-tax",
+    heroImage: { src: "/images/insights/library/hongkong.jpg", alt: "홍콩 스카이라인 — 역외보험" },
     title: "역외보험 해지하면 세금은 어떻게 되나요? 해지환급금·신고의무 총정리",
     description:
       "역외보험을 중도 해지하면 초기에는 해지환급금이 원금보다 적을 수 있고, 발생한 이익에는 세금이 부과될 수 있습니다. 해지환급금 구조, 세금·해외금융계좌 신고 이슈, 해지 대신 고려할 수 있는 방법까지 정리했습니다.",
