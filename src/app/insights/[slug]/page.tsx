@@ -155,6 +155,23 @@ export default async function InsightPage({ params }: Props) {
                     ))}
                   </div>
                 )}
+                {s.sources && (
+                  <ul className="mt-5 space-y-2 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                    {s.sources.map((src) => (
+                      <li key={src.href} className="flex items-start gap-2 text-sm">
+                        <span className="mt-0.5 shrink-0 text-slate-400" aria-hidden="true">↗</span>
+                        <a
+                          href={src.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-navy-700 underline decoration-slate-300 underline-offset-2 hover:text-navy-950 hover:decoration-navy-600"
+                        >
+                          {src.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 {s.bullets && (
                   <ul className="mt-4 space-y-2">
                     {s.bullets.map((b) => (
