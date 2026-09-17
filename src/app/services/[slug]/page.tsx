@@ -126,6 +126,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       <CtaSection
+        source={`service:${service.title}`}
         title={`${service.title}, 전문가와 상담하세요`}
         description="현재 상황을 진단하고 실행 가능한 다음 단계를 제시합니다."
       />

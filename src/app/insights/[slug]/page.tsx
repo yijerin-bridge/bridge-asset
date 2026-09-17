@@ -209,6 +209,7 @@ export default async function InsightPage({ params }: Props) {
       </article>
 
       <CtaSection
+        source={`insight:${a.title}`}
         title="내 상황엔 어떻게 적용될까요?"
         description="글로 다 담지 못한 개인별 설계는 무료 상담에서 진단해 드립니다."
       />

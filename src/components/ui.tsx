@@ -80,10 +80,15 @@ export function ServiceCard({ service }: { service: Service }) {
 export function CtaSection({
   title = "지금, 자산관리 전문가와 상담하세요",
   description = "첫 상담은 무료입니다. 현재 자산 구조를 진단하고 다음 단계를 함께 설계합니다.",
+  source,
 }: {
   title?: string;
   description?: string;
+  source?: string;
 }) {
+  const contactHref = source
+    ? `/contact?source=${encodeURIComponent(source)}`
+    : "/contact";
   return (
     <section className="bg-navy-950">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 text-center">
@@ -95,7 +100,7 @@ export function CtaSection({
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
-            href="/contact"
+            href={contactHref}
             className="rounded-md bg-gold-500 px-6 py-3 text-base font-semibold text-navy-950 hover:bg-gold-400 transition-colors duration-200"
           >
             무료 상담 신청

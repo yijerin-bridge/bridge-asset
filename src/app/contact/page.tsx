@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
+import ConsultForm from "@/components/ConsultForm";
 
 export const metadata: Metadata = {
   title: "상담문의 — 무료 자산관리 상담 신청",
@@ -83,6 +84,14 @@ export default function ContactPage() {
             실행 가능한 다음 단계를 제시합니다.
           </p>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-16">
+        <div className="mb-6 text-center">
+          <h2 className="text-2xl font-bold tracking-tight text-navy-950">상담 신청서</h2>
+          <p className="mt-2 text-sm text-slate-600">아래 양식을 남겨주시면 담당자가 연락드립니다. 첫 진단 상담은 무료입니다.</p>
+        </div>
+        <ConsultForm />
       </section>
 
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
