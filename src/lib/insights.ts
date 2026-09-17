@@ -53,7 +53,7 @@ export const insights: Insight[] = [
       "달러 자산 분산",
     ],
     date: "2026-09-17",
-    status: "draft",
+    status: "published",
     lead: "IUL(Index Universal Life, 인덱스 유니버설 생명보험)은 납입 보험료가 S&P 500·나스닥100 같은 대표 지수의 성과에 연동되어 적립되는 미국의 생명보험 상품으로, 지수 상승분은 연 8~12% 수준의 상한(캡)까지 반영하되 지수가 하락한 해에는 적립 이율 0%로 손실을 반영하지 않는 것이 핵심입니다.",
     sections: [
       {
