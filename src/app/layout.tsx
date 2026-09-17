@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import NaverAnalytics from "@/components/NaverAnalytics";
 
 const notoSansKr = Noto_Sans_KR({
   variable: "--font-noto-sans-kr",
@@ -97,6 +98,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <GoogleAnalytics gaId={site.gaId} />
+        <NaverAnalytics />
       </body>
     </html>
   );
