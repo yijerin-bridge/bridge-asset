@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { kv } from "@vercel/kv";
+import { getRedis, redisReady } from "@/lib/redis";
 import { Resend } from "resend";
 import { site } from "@/lib/site";
 import { CONSULT_KV_KEY, sourceLabel, type ConsultSubmission } from "@/lib/consult";
@@ -14,9 +14,6 @@ const NOTIFY = (process.env.CONSULT_NOTIFY_EMAILS ||
   .map((s) => s.trim())
   .filter(Boolean);
 
-function kvReady() {
-  return Boolean(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
-}
 
 export async function POST(req: Request) {
   let body: Record<string, string>;
@@ -53,16 +50,16 @@ export async function POST(req: Request) {
     status: "new",
   };
 
-  // 1) 저장 (KV)
-  if (kvReady()) {
+  // 1) 저장 (Upstash Redis)
+  if (redisReady()) {
     try {
-      await kv.lpush(CONSULT_KV_KEY, JSON.stringify(sub));
+      await getRedis()!.lpush(CONSULT_KV_KEY, JSON.stringify(sub));
     } catch (e) {
-      console.error("KV 저장 실패", e);
+      console.error("Redis 저장 실패", e);
       return NextResponse.json({ ok: false, error: "저장 중 오류가 발생했습니다. 전화로 문의해주세요." }, { status: 500 });
     }
   } else {
-    console.error("KV 미설정 — 신청을 저장하지 못했습니다:", sub);
+    console.error("Redis 미설정 — 신청을 저장하지 못했습니다:", sub);
     // 저장소가 없어도 최소한 이메일은 시도
   }
 
