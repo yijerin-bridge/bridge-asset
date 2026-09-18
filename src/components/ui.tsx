@@ -116,3 +116,29 @@ export function CtaSection({
     </section>
   );
 }
+
+export function InlineCta({
+  source,
+  title = "내 상황에도 적용되는지 확인해 보세요",
+  description = "자산관리 상담 20만원, 만 30세 이하 사회초년생 5만원. 현재 자산 구조를 진단하고 다음 단계를 함께 설계합니다.",
+}: {
+  source?: string;
+  title?: string;
+  description?: string;
+}) {
+  const href = source ? `/contact?source=${encodeURIComponent(source)}` : "/contact";
+  return (
+    <aside className="my-10 rounded-2xl border border-gold-500/40 bg-gold-50/60 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6">
+      <div>
+        <p className="text-base font-bold text-navy-950">{title}</p>
+        <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{description}</p>
+      </div>
+      <Link
+        href={href}
+        className="mt-4 inline-block shrink-0 rounded-md bg-navy-950 px-5 py-3 text-sm font-semibold text-white hover:bg-navy-800 transition-colors duration-200 sm:mt-0"
+      >
+        상담 신청하기
+      </Link>
+    </aside>
+  );
+}

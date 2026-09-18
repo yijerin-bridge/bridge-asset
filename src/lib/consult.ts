@@ -10,7 +10,9 @@ export type ConsultSubmission = {
   callTime: string; // 통화 가능시간
   region: string; // 희망 상담지역
   message: string; // 상담 전 요청사항/관심분야
-  source: string; // 소스 태그 (어느 콘텐츠/메뉴에서 왔는지)
+  source: string; // 소스 태그 (어느 콘텐츠/메뉴의 버튼을 눌렀는지)
+  referrer?: string; // 상담문의 페이지 직전에 보던 우리 사이트 경로
+  referrerLabel?: string; // 위 경로를 사람이 읽는 이름으로 변환한 값
   status?: "new" | "done"; // 관리자 처리 상태
 };
 

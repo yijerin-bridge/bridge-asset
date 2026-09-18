@@ -7,6 +7,7 @@ const inputCls =
 
 export default function ConsultForm() {
   const [source, setSource] = useState("");
+  const [referrer, setReferrer] = useState("");
   const [gender, setGender] = useState("");
   const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
@@ -16,6 +17,12 @@ export default function ConsultForm() {
     try {
       const p = new URLSearchParams(window.location.search);
       setSource(p.get("source") || "");
+      // 같은 사이트 안에서 넘어온 경우에만 직전 페이지 경로를 기록합니다.
+      const ref = document.referrer;
+      if (ref) {
+        const u = new URL(ref);
+        if (u.origin === window.location.origin) setReferrer(u.pathname + u.search);
+      }
     } catch {}
   }, []);
 
@@ -39,6 +46,7 @@ export default function ConsultForm() {
       message: String(fd.get("message") || ""),
       company: String(fd.get("company") || ""), // honeypot
       source,
+      referrer,
       consent: "true",
     };
     try {

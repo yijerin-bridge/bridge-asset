@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { site } from "@/lib/site";
 import { insights, publishedInsights, getInsight } from "@/lib/insights";
-import { CtaSection } from "@/components/ui";
+import { CtaSection, InlineCta } from "@/components/ui";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, faqJsonLd } from "@/lib/jsonld";
 
@@ -112,8 +113,9 @@ export default async function InsightPage({ params }: Props) {
           </p>
 
           <div className="mt-10 space-y-10">
-            {a.sections.map((s) => (
-              <section key={s.heading}>
+            {a.sections.map((s, si) => (
+              <Fragment key={s.heading}>
+              <section>
                 <h2 className="text-xl font-bold text-navy-950">{s.heading}</h2>
                 {s.paragraphs?.map((p, i) => (
                   <p key={i} className="mt-3 text-base leading-relaxed text-slate-700">
@@ -183,6 +185,10 @@ export default async function InsightPage({ params }: Props) {
                   </ul>
                 )}
               </section>
+              {si === Math.floor(a.sections.length / 2) - 1 && (
+                <InlineCta source={`insight:${a.title}`} />
+              )}
+              </Fragment>
             ))}
           </div>
 

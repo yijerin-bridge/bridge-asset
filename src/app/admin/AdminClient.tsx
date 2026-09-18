@@ -97,6 +97,9 @@ export default function AdminClient() {
                 <div className="text-right text-xs text-slate-400">
                   {new Date(s.createdAt).toLocaleString("ko-KR")}
                   <div className="mt-1 inline-block rounded-full bg-navy-50 px-2 py-0.5 font-semibold text-navy-700">{sourceLabel(s.source)}</div>
+                  {s.referrerLabel && (
+                    <div className="mt-1 inline-block rounded-full bg-gold-100 px-2 py-0.5 font-semibold text-gold-700" title="상담문의 페이지 직전에 보던 페이지">직전: {s.referrerLabel}</div>
+                  )}
                 </div>
               </div>
               <dl className="mt-4 grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2">

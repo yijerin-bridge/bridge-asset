@@ -3,6 +3,7 @@ import { getRedis, redisReady } from "@/lib/redis";
 import { Resend } from "resend";
 import { site } from "@/lib/site";
 import { CONSULT_KV_KEY, sourceLabel, type ConsultSubmission } from "@/lib/consult";
+import { pathLabel } from "@/lib/pathLabel";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -47,6 +48,8 @@ export async function POST(req: Request) {
     region: String(body.region).slice(0, 80),
     message: String(body.message).slice(0, 2000),
     source: String(body.source || "").slice(0, 120),
+    referrer: String(body.referrer || "").slice(0, 300),
+    referrerLabel: pathLabel(String(body.referrer || "")).slice(0, 200),
     status: "new",
   };
 
@@ -77,6 +80,7 @@ export async function POST(req: Request) {
         ["희망 상담지역", sub.region],
         ["요청사항/관심분야", sub.message],
         ["유입 경로", sourceLabel(sub.source)],
+        ["직전에 보던 페이지", sub.referrerLabel || "-"],
         ["접수시각", new Date(sub.createdAt).toLocaleString("ko-KR")],
       ];
       const html = `<h2>새 상담 신청</h2><table cellpadding="8" style="border-collapse:collapse">${rows
