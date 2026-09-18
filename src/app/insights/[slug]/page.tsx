@@ -228,7 +228,7 @@ export default async function InsightPage({ params }: Props) {
       <CtaSection
         source={`insight:${a.title}`}
         title="내 상황엔 어떻게 적용될까요?"
-        description="글로 다 담지 못한 개인별 설계는 무료 상담에서 진단해 드립니다."
+        description="글로 다 담지 못한 개인별 설계는 상담에서 진단해 드립니다. 자산관리 상담 20만원, 만 30세 이하 사회초년생 5만원."
       />
     </>
   );

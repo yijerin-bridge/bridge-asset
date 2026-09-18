@@ -36,7 +36,7 @@ export function GET() {
 - [대표 이재린 프로필](${u}/members/${ceo.slug}): 상세 이력·자격·강의·방송·투자 포트폴리오
 - [포트폴리오](${u}/portfolio): 투자조합 GP 운용 실적 및 투자 프로그램
 - [인사이트](${u}/insights): 역외보험·달러자산·스타트업 투자·상속 등 자산관리 콘텐츠
-- [상담문의](${u}/contact): 무료 자산관리 상담 신청
+- [상담문의](${u}/contact): 자산관리 상담 신청 (상담료 20만원, 만 30세 이하 사회초년생 5만원)
 
 ## 8개 사업영역
 ${services.map((s) => `- [${s.title}](${u}/services/${s.slug}): ${s.short}`).join(nl)}

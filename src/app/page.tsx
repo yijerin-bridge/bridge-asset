@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "상담 비용이 있나요?",
-    a: "첫 진단 상담은 무료입니다. 이후 포트폴리오 설계와 지속 관리 범위에 따라 서비스 방식을 안내드립니다.",
+    a: "자산관리 상담은 20만원이며, 만 30세 이하 사회초년생은 5만원입니다. 상담에서 현재 자산 구조를 진단한 뒤, 포트폴리오 설계와 지속 관리 범위에 따라 서비스 방식을 안내드립니다.",
   },
   {
     q: "어떤 자산까지 관리해 주나요?",
@@ -73,7 +73,7 @@ export default function HomePage() {
               href="/contact"
               className="rounded-md bg-gold-500 px-6 py-3 text-base font-semibold text-navy-950 hover:bg-gold-400 transition-colors duration-200"
             >
-              무료 상담 신청
+              상담 신청
             </Link>
             <Link
               href="/services"

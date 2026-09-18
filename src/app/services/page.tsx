@@ -50,7 +50,7 @@ export default function ServicesPage() {
 
       <CtaSection
         title="어떤 자산부터 시작해야 할지 모르겠다면"
-        description="현재 자산 구조를 무료로 진단해 드립니다. 우선순위부터 함께 정리하세요."
+        description="자산관리 상담 20만원, 만 30세 이하 사회초년생 5만원. 현재 자산 구조를 진단하고 우선순위부터 함께 정리합니다."
       />
     </>
   );

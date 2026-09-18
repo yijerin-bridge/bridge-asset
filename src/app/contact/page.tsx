@@ -5,13 +5,13 @@ import { breadcrumbJsonLd } from "@/lib/jsonld";
 import ConsultForm from "@/components/ConsultForm";
 
 export const metadata: Metadata = {
-  title: "상담문의 — 무료 자산관리 상담 신청",
+  title: "상담문의 — 자산관리 상담 신청 (상담료 안내)",
   description:
-    "브릿지자산관리 무료 상담 신청. 전화 0507-1432-6765, 이메일, 네이버 블로그로 문의하세요. 서울 서초구 방문 상담 및 화상 상담 가능.",
+    "브릿지자산관리 자산관리 상담 신청. 상담료 20만원, 만 30세 이하 사회초년생 5만원. 전화 0507-1432-6765, 이메일, 네이버 블로그로 문의하세요. 서울 서초구 방문 상담 및 화상 상담 가능.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "상담문의 | 브릿지자산관리",
-    description: "첫 진단 상담은 무료입니다. 지금 신청하세요.",
+    description: "자산관리 상담 20만원 · 만 30세 이하 사회초년생 5만원. 지금 신청하세요.",
   },
 };
 
@@ -77,19 +77,36 @@ export default function ContactPage() {
             Contact
           </p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            무료 상담 신청
+            상담 신청
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-300">
-            첫 진단 상담은 무료입니다. 현재 자산 구조와 재무 목표를 정리하고,
+            현재 자산 구조와 재무 목표를 정리하고,
             실행 가능한 다음 단계를 제시합니다.
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-16">
+        <h2 className="text-center text-2xl font-bold tracking-tight text-navy-950">상담료 안내</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+            <p className="text-sm font-semibold text-slate-600">자산관리 상담</p>
+            <p className="mt-2 text-3xl font-bold text-navy-950">20만원</p>
+          </div>
+          <div className="rounded-2xl border-2 border-gold-500 bg-white p-6 text-center shadow-sm">
+            <p className="text-sm font-semibold text-slate-600">만 30세 이하 사회초년생</p>
+            <p className="mt-2 text-3xl font-bold text-navy-950">5만원</p>
+          </div>
+        </div>
+        <p className="mt-4 text-center text-sm text-slate-500">
+          상담료는 1회 상담 기준입니다. 이후 포트폴리오 설계와 지속 관리 범위는 상담에서 안내드립니다.
+        </p>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-16">
         <div className="mb-6 text-center">
           <h2 className="text-2xl font-bold tracking-tight text-navy-950">상담 신청서</h2>
-          <p className="mt-2 text-sm text-slate-600">아래 양식을 남겨주시면 담당자가 연락드립니다. 첫 진단 상담은 무료입니다.</p>
+          <p className="mt-2 text-sm text-slate-600">아래 양식을 남겨주시면 담당자가 연락드립니다.</p>
         </div>
         <ConsultForm />
       </section>

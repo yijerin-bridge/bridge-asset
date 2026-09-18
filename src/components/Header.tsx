@@ -53,12 +53,6 @@ export default function Header() {
                 </Link>
               );
             })}
-            <Link
-              href="/contact"
-              className="ml-3 rounded-md bg-navy-950 px-4 py-2 text-sm font-medium text-white hover:bg-navy-800 transition-colors duration-200"
-            >
-              무료 상담 신청
-            </Link>
           </nav>
 
           <button
@@ -103,13 +97,6 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="mt-2 block rounded-md bg-navy-950 px-3 py-3 text-center text-base font-medium text-white hover:bg-navy-800"
-            onClick={() => setOpen(false)}
-          >
-            무료 상담 신청
-          </Link>
         </nav>
       )}
     </header>

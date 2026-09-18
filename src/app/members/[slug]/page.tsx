@@ -297,7 +297,7 @@ export default async function MemberDetailPage({ params }: Props) {
       <CtaSection
         source={`member:${m.name}`}
         title={`${m.name} ${m.ceo ? "대표" : "자산관리사"}와 상담하세요`}
-        description="첫 진단 상담은 무료입니다. 편하게 문의해 주세요."
+        description="자산관리 상담 20만원, 만 30세 이하 사회초년생 5만원. 편하게 문의해 주세요."
       />
     </>
   );
