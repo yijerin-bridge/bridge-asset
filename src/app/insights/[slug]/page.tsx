@@ -164,8 +164,8 @@ export default async function InsightPage({ params }: Props) {
                         <span className="mt-0.5 shrink-0 text-slate-400" aria-hidden="true">↗</span>
                         <a
                           href={src.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          target={src.href.startsWith("/") ? undefined : "_blank"}
+                          rel={src.href.startsWith("/") ? undefined : "noopener noreferrer"}
                           className="font-medium text-navy-700 underline decoration-slate-300 underline-offset-2 hover:text-navy-950 hover:decoration-navy-600"
                         >
                           {src.label}
