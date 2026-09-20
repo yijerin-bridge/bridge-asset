@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { sourceLabel, type ConsultSubmission } from "@/lib/consult";
+import PushToggle from "@/components/PushToggle";
 
 export default function AdminClient() {
   const [pw, setPw] = useState("");
@@ -89,6 +90,7 @@ export default function AdminClient() {
             </button>
           ))}
           <button onClick={() => void load(pw)} className="rounded-full bg-slate-100 px-3 py-1.5 font-medium text-slate-600">새로고침</button>
+          <PushToggle pw={pw} />
         </div>
       </div>
 

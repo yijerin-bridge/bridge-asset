@@ -4,6 +4,7 @@ import { Resend } from "resend";
 import { site } from "@/lib/site";
 import { CONSULT_KV_KEY, sourceLabel, type ConsultSubmission } from "@/lib/consult";
 import { pathLabel } from "@/lib/pathLabel";
+import { sendPushToAll } from "@/lib/push";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -66,7 +67,18 @@ export async function POST(req: Request) {
     // 저장소가 없어도 최소한 이메일은 시도
   }
 
-  // 2) 이메일 알림 (Resend, best-effort)
+  // 2) 브라우저 푸시 알림 (best-effort)
+  try {
+    await sendPushToAll({
+      title: `새 상담 신청 · ${sub.name}`,
+      body: `${sub.phone} / ${sourceLabel(sub.source)}`,
+      url: "/admin",
+    });
+  } catch (e) {
+    console.error("푸시 발송 실패", e);
+  }
+
+  // 3) 이메일 알림 (Resend, best-effort)
   if (process.env.RESEND_API_KEY) {
     try {
       const resend = new Resend(process.env.RESEND_API_KEY);
