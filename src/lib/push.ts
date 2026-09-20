@@ -49,7 +49,11 @@ export async function sendPushToAll(payload: {
   if (!pushReady()) return { sent: 0, removed: 0 };
   configure();
   const subs = await loadSubs();
-  const data = JSON.stringify(payload);
+
+  // 한글이 전송 구간에서 깨지지 않도록 UTF-8 바이트를 base64로 인코딩해 보냅니다.
+  // 전송되는 문자열이 순수 ASCII가 되므로 인코딩 처리와 무관하게 안전합니다.
+  const data = Buffer.from(JSON.stringify(payload), "utf8").toString("base64");
+
   let sent = 0;
   const dead: string[] = [];
 
@@ -66,7 +70,6 @@ export async function sendPushToAll(payload: {
     })
   );
 
-  // 죽은 구독 제거
   if (dead.length) {
     const fresh = await loadSubs();
     const keep = fresh.filter((s) => !dead.includes(s.endpoint));
