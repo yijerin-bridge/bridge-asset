@@ -41,6 +41,21 @@ export default function AdminClient() {
     setItems((prev) => prev.map((x) => (x.id === id ? { ...x, status } : x)));
   }
 
+  async function remove(id: string, name: string) {
+    if (!window.confirm(`'${name}' 신청을 삭제할까요?
+삭제하면 되돌릴 수 없습니다.`)) return;
+    const res = await fetch("/api/consult/admin", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password: pw, action: "delete", id }),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (res.ok && data.ok) {
+      setItems((prev) => prev.filter((x) => x.id !== id));
+    } else {
+      window.alert(data.error || "삭제하지 못했습니다. 새로고침 후 다시 시도해주세요.");
+    }
+  }
+
   if (!authed) {
     return (
       <div className="mx-auto max-w-sm px-4 py-24">
@@ -108,10 +123,18 @@ export default function AdminClient() {
                 <div className="flex gap-2"><dt className="text-slate-400">희망지역</dt><dd className="text-navy-900">{s.region}</dd></div>
               </dl>
               <p className="mt-3 whitespace-pre-wrap rounded-lg bg-slate-50 p-3 text-sm text-slate-700">{s.message}</p>
-              <div className="mt-3 flex justify-end">
+              <div className="mt-3 flex items-center justify-between gap-2">
+                <button
+                  onClick={() => void remove(s.id, s.name)}
+                  className="rounded-md border border-red-200 px-3 py-1.5 text-xs font-medium text-red-600 hover:bg-red-50"
+                >
+                  삭제
+                </button>
+                <div className="flex gap-2">
                 {(s.status || "new") === "new"
                   ? <button onClick={() => setStatus(s.id, "done")} className="rounded-md bg-navy-950 px-3 py-1.5 text-xs font-semibold text-white hover:bg-navy-800">완료 처리</button>
                   : <button onClick={() => setStatus(s.id, "new")} className="rounded-md border border-slate-300 px-3 py-1.5 text-xs font-medium text-slate-600">신규로 되돌리기</button>}
+                </div>
               </div>
             </div>
           ))}
