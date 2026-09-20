@@ -29,6 +29,7 @@ export const site = {
     google: "JfpKIAzx0D_JeCtYTAxQy6hyE4GCis8iVLxwFwXhhwk",
     naver: "0db20cc858bf5d3b9483e986b593901f94f87dab",
   },
+  // GA4 측정ID — 직접 삽입은 제거했고, 현재는 GTM(GTM-P7PNGGJZ) 안의 GA4 태그로 수집합니다.
   gaId: "G-H49BE6R4Z3",
 } as const;
 
