@@ -52,7 +52,7 @@ export const insights: Insight[] = [
       "저축성보험 주의",
     ],
     date: "2026-09-21",
-    status: "draft",
+    status: "published",
     lead: "20대 재무설계의 핵심은 얼마를 버느냐가 아니라 얼마나 일찍 시작하느냐입니다. 같은 3억을 모으더라도 30년을 쓰면 월 15만 원이면 되지만, 5년으로 압축하면 월 387만 원이 필요합니다.",
     sections: [
       {
