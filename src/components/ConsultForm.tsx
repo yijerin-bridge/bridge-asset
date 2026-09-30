@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const inputCls =
   "mt-1.5 w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-sm text-navy-950 placeholder-slate-400 focus:border-navy-600 focus:outline-none focus:ring-1 focus:ring-navy-600";
 
 export default function ConsultForm() {
+  const router = useRouter();
   const [source, setSource] = useState("");
   const [referrer, setReferrer] = useState("");
   const [gender, setGender] = useState("");
@@ -58,6 +60,7 @@ export default function ConsultForm() {
       const data = await res.json();
       if (res.ok && data.ok) {
         setStatus("done");
+        router.push("/contact_thankyou");
       } else {
         setStatus("error");
         setErrMsg(data.error || "접수 중 오류가 발생했습니다. 전화로 문의해주세요.");

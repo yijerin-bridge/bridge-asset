@@ -93,7 +93,7 @@ export default function ContactPage() {
             <p className="text-sm font-semibold text-slate-600">자산관리 상담</p>
             <p className="mt-2 text-3xl font-bold text-navy-950">20만원</p>
           </div>
-          <div className="rounded-2xl border-2 border-gold-500 bg-white p-6 text-center shadow-sm">
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
             <p className="text-sm font-semibold text-slate-600">만 30세 이하 사회초년생</p>
             <p className="mt-2 text-3xl font-bold text-navy-950">5만원</p>
           </div>
