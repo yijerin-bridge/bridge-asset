@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import ConsultComplete from "@/components/ConsultComplete";
 
 export const metadata: Metadata = {
   title: "상담 신청이 접수되었습니다",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function ContactThankYouPage() {
   return (
     <>
+      <ConsultComplete />
       <section className="bg-navy-950">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 py-20 text-center">
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white/10 text-gold-400">
