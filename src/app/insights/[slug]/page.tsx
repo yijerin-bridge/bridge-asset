@@ -7,6 +7,7 @@ import { insights, publishedInsights, getInsight } from "@/lib/insights";
 import { CtaSection, InlineCta } from "@/components/ui";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, faqJsonLd } from "@/lib/jsonld";
+import { ogImageFor } from "@/lib/ogImage";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -30,6 +31,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: a.description,
       publishedTime: a.date,
       modifiedTime: a.updated ?? a.date,
+      images: [
+        {
+          url: ogImageFor(a.heroImage?.src),
+          width: 1200,
+          height: 630,
+          alt: a.heroImage?.alt ?? a.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: a.title,
+      description: a.description,
+      images: [ogImageFor(a.heroImage?.src)],
     },
   };
 }
