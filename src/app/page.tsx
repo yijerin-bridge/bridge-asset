@@ -38,17 +38,28 @@ export default function HomePage() {
       <JsonLd data={faqJsonLd(faqs)} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-950">
+      <section className="relative isolate overflow-hidden bg-navy-950">
+        {/* 배경 사진 */}
+        <Image
+          src="/images/hero-skyline.webp"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* 글자 가독성을 위한 오버레이 — 왼쪽을 더 어둡게 깔아 본문을 받칩니다 */}
         <div
-          className="pointer-events-none absolute inset-0 opacity-40"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 70% 20%, rgba(202,138,4,0.25), transparent), radial-gradient(ellipse 60% 50% at 20% 80%, rgba(44,79,124,0.5), transparent)",
-          }}
+          className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/85 to-navy-950/45"
           aria-hidden="true"
         />
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-24 sm:py-32">
-          <p className="flex items-center gap-3 text-sm font-semibold uppercase tracking-widest text-gold-400">
+        <div
+          className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy-950 to-transparent"
+          aria-hidden="true"
+        />
+
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-28 sm:py-36">
+          <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-gold-400 sm:text-sm">
             <Image
               src="/images/logo-mark.png"
               alt=""
@@ -59,43 +70,42 @@ export default function HomePage() {
             />
             {site.nameEn}
           </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mt-6 max-w-3xl break-keep text-[2rem] font-bold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">
             글로벌 자산관리의 전문가,
             <br />
             <span className="text-gold-400">브릿지자산관리</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+          <p className="mt-6 max-w-2xl break-keep text-base leading-relaxed text-slate-200 sm:text-lg">
             주식·펀드부터 역외투자, 퇴직연금, 스타트업, 부동산, 보험까지.
             고객의 경제적 자유를 향한 가교가 되겠습니다.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-wrap gap-3">
             <Link
               href="/contact"
-              className="rounded-md bg-gold-500 px-6 py-3 text-base font-semibold text-navy-950 hover:bg-gold-400 transition-colors duration-200"
+              className="rounded-md bg-gold-500 px-6 py-3.5 text-base font-semibold text-navy-950 shadow-lg shadow-gold-500/20 hover:bg-gold-400 transition-colors duration-200"
             >
               상담 신청
             </Link>
             <Link
               href="/services"
-              className="rounded-md border border-white/30 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 transition-colors duration-200"
+              className="rounded-md border border-white/25 bg-white/5 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm hover:bg-white/15 transition-colors duration-200"
             >
               사업영역 보기
             </Link>
           </div>
 
-          <dl className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-4">
+          <dl className="mt-16 grid grid-cols-2 gap-3 sm:mt-20 sm:grid-cols-4 sm:gap-4">
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="rounded-xl border border-white/10 bg-white/5 p-5"
+                className="rounded-xl border border-white/15 bg-white/10 p-5 backdrop-blur-md"
               >
                 <dd className="text-2xl font-bold text-white">{s.value}</dd>
-                <dt className="mt-1 block text-sm text-slate-400">{s.label}</dt>
+                <dt className="mt-1 block text-sm text-slate-300">{s.label}</dt>
               </div>
             ))}
           </dl>
-        </div>
-      </section>
+        </div>      </section>
 
       {/* Mission */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">

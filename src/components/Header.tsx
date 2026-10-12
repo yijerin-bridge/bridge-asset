@@ -16,7 +16,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2.5 shrink-0"
+            className="flex min-w-0 items-center gap-2.5"
             aria-label={`${site.name} 홈으로`}
             onClick={() => setOpen(false)}
           >
@@ -25,10 +25,10 @@ export default function Header() {
               alt=""
               width={112}
               height={45}
-              className="h-9 w-auto"
+              className="h-8 w-auto shrink-0 sm:h-9"
               priority
             />
-            <span className="font-bold text-sm sm:text-base text-navy-950 tracking-tight leading-tight">
+            <span className="min-w-0 truncate text-[13px] font-bold leading-tight tracking-tight text-navy-950 sm:text-base">
               Bridge Asset Management Inc.
             </span>
           </Link>
