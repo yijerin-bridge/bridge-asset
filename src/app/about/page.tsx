@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHeader from "@/components/PageHeader";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { services } from "@/lib/services";
@@ -70,31 +71,17 @@ export default function AboutPage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-950">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-40"
-          style={{
-            background:
-              "radial-gradient(ellipse 70% 60% at 75% 15%, rgba(202,138,4,0.22), transparent), radial-gradient(ellipse 60% 50% at 15% 85%, rgba(44,79,124,0.5), transparent)",
-          }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-20">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gold-400">
-            About Us
-          </p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+      <PageHeader
+        eyebrow="About Us"
+        title={
+          <>
             글로벌 자산관리의 전문가,
             <br />
             <span className="text-gold-400">브릿지자산관리</span>
-          </h1>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-300">
-            {site.legalName}는 증권·부동산·스타트업·보험 등 다양한 금융 분야를
-            아우르며, 고객 한 분 한 분의 자산을 자산배분의 원칙 위에서 설계하고
-            관리하는 종합 자산관리 회사입니다.
-          </p>
-        </div>
-      </section>
+          </>
+        }
+        description={`${site.legalName}는 증권·부동산·스타트업·보험 등 다양한 금융 분야를 아우르며, 고객 한 분 한 분의 자산을 자산배분의 원칙 위에서 설계하고 관리하는 종합 자산관리 회사입니다.`}
+      />
 
       {/* Mission */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
@@ -119,7 +106,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision */}
-      <section className="bg-navy-950">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-gold-400">
             Vision

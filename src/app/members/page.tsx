@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
@@ -89,20 +90,11 @@ export default function MembersPage() {
         ])}
       />
 
-      <section className="bg-navy-950">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gold-400">
-            Members
-          </p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            브릿지자산관리 멤버
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-300">
-            고객의 더 나은 삶의 가능성을 함께 열어가는 자산관리 전문가들을
-            소개합니다.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Members"
+        title="브릿지자산관리 멤버"
+        description="고객의 더 나은 삶의 가능성을 함께 열어가는 자산관리 전문가들을 소개합니다."
+      />
 
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHeader from "@/components/PageHeader";
 import { services } from "@/lib/services";
 import { SectionHeading, ServiceCard, CtaSection } from "@/components/ui";
 import JsonLd from "@/components/JsonLd";
@@ -25,20 +26,11 @@ export default function ServicesPage() {
           { name: "서비스", path: "/services" },
         ])}
       />
-      <section className="bg-navy-950">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gold-400">
-            Services
-          </p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            8개 자산 영역, 하나의 전략
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-300">
-            자산관리는 상품 판매가 아니라 설계입니다. 고객의 재무 목표에서
-            출발해 8개 자산 영역을 하나의 포트폴리오로 통합합니다.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Services"
+        title="8개 자산 영역, 하나의 전략"
+        description="자산관리는 상품 판매가 아니라 설계입니다. 고객의 재무 목표에서 출발해 8개 자산 영역을 하나의 포트폴리오로 통합합니다."
+      />
 
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

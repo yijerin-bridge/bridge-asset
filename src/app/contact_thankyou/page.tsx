@@ -15,7 +15,7 @@ export default function ContactThankYouPage() {
   return (
     <>
       <ConsultComplete />
-      <section className="bg-navy-950">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 py-20 text-center">
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white/10 text-gold-400">
             <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHeader from "@/components/PageHeader";
 import Link from "next/link";
 import { publishedInsights } from "@/lib/insights";
 import { SectionHeading, CtaSection } from "@/components/ui";
@@ -26,20 +27,11 @@ export default function InsightsPage() {
           { name: "인사이트", path: "/insights" },
         ])}
       />
-      <section className="bg-navy-950">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gold-400">
-            Insights
-          </p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            자산관리 인사이트
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-300">
-            역외보험·달러자산, 스타트업 투자, 상속·연금까지. 판매가 아닌 진단의
-            관점에서 자산관리 전문가가 직접 정리합니다.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Insights"
+        title="자산관리 인사이트"
+        description="역외보험·달러자산, 스타트업 투자, 상속·연금까지. 판매가 아닌 진단의 관점에서 자산관리 전문가가 직접 정리합니다."
+      />
 
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         {sorted.length === 0 ? (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
 import { funds, products } from "@/lib/portfolio";
 import { SectionHeading, CtaSection } from "@/components/ui";
@@ -27,21 +28,11 @@ export default function PortfolioPage() {
         ])}
       />
 
-      <section className="bg-navy-950">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gold-400">
-            Portfolio (GP / LP)
-          </p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            함께 성장한 투자 포트폴리오
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-300">
-            개인투자조합 GP로서, 그리고 엔젤투자자로서 초기 스타트업부터
-            Pre-IPO까지 투자해 왔습니다. 코스닥·나스닥 IPO 엑싯 경험을 보유하고
-            있습니다.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Portfolio (GP / LP)"
+        title="함께 성장한 투자 포트폴리오"
+        description="개인투자조합 GP로서, 그리고 엔젤투자자로서 초기 스타트업부터 Pre-IPO까지 투자해 왔습니다. 코스닥·나스닥 IPO 엑싯 경험을 보유하고 있습니다."
+      />
 
       {/* 투자조합 */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">

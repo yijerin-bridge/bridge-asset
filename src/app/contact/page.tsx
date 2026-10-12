@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHeader from "@/components/PageHeader";
 import { site } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
@@ -71,20 +72,11 @@ export default function ContactPage() {
         ])}
       />
 
-      <section className="bg-navy-950">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gold-400">
-            Contact
-          </p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            상담 신청
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-300">
-            현재 자산 구조와 재무 목표를 정리하고,
-            실행 가능한 다음 단계를 제시합니다.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Contact"
+        title="상담 신청"
+        description="현재 자산 구조와 재무 목표를 정리하고, 실행 가능한 다음 단계를 제시합니다."
+      />
 
       <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-16">
         <h2 className="text-center text-2xl font-bold tracking-tight text-navy-950">상담료 안내</h2>
