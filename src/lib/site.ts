@@ -11,11 +11,12 @@ export const site = {
   phone: "0507-1432-6765",
   email: "bridgeasset@naver.com",
   address: {
-    full: "서울시 서초구 효령로 77길 34, 1동 1층 109호",
-    street: "효령로 77길 34, 1동 1층 109호",
-    region: "서울특별시",
-    locality: "서초구",
-    postalCode: "06695",
+    full: "경기도 수원시 영통구 매영로45번길 1, 4층",
+    street: "매영로45번길 1, 4층",
+    region: "경기도",
+    locality: "수원시 영통구",
+    // 우편번호 미확인 — 확인되면 채웁니다(현재 어디에도 사용되지 않음)
+    postalCode: "",
     country: "KR",
   },
   founded: "2021",

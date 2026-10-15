@@ -128,7 +128,7 @@ export default function ConsultForm() {
         </div>
         <div>
           <label htmlFor="c-region" className="text-sm font-semibold text-navy-950">희망 상담지역 <span className="text-gold-600">*</span></label>
-          <input id="c-region" name="region" required className={inputCls} placeholder="예) 서울 서초 / 화상 상담" />
+          <input id="c-region" name="region" required className={inputCls} placeholder="예) 수원 영통 / 화상 상담" />
         </div>
       </div>
 

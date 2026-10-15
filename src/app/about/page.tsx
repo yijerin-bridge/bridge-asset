@@ -194,7 +194,7 @@ export default function AboutPage() {
             align="left"
             eyebrow="Company"
             title="회사 정보"
-            description="브릿지자산관리는 서울 서초구에 위치하고 있습니다."
+            description="브릿지자산관리는 경기도 수원시 영통구에 위치하고 있습니다."
           />
           <dl className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
             {companyInfo.map((row) => (

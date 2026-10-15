@@ -8,7 +8,7 @@ import ConsultForm from "@/components/ConsultForm";
 export const metadata: Metadata = {
   title: "상담문의 — 자산관리 상담 신청 (상담료 안내)",
   description:
-    "브릿지자산관리 자산관리 상담 신청. 상담료 20만원, 만 30세 이하 사회초년생 5만원. 전화 0507-1432-6765, 이메일, 네이버 블로그로 문의하세요. 서울 서초구 방문 상담 및 화상 상담 가능.",
+    "브릿지자산관리 자산관리 상담 신청. 상담료 20만원, 만 30세 이하 사회초년생 5만원. 전화 0507-1432-6765, 이메일, 네이버 블로그로 문의하세요. 수원 영통 방문 상담 및 화상 상담 가능.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "상담문의 | 브릿지자산관리",
