@@ -15,8 +15,7 @@ export const site = {
     street: "매영로45번길 1, 4층",
     region: "경기도",
     locality: "수원시 영통구",
-    // 우편번호 미확인 — 확인되면 채웁니다(현재 어디에도 사용되지 않음)
-    postalCode: "",
+    postalCode: "16524",
     country: "KR",
   },
   founded: "2021",
