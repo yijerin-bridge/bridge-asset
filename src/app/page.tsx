@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { YouTubeEmbed } from "@next/third-parties/google";
+import { videos } from "@/lib/videos";
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
@@ -198,6 +200,43 @@ export default function HomePage() {
         </ul>
       </section>
 
+      {/* YouTube */}
+      <section className="bg-white border-y border-slate-200">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
+          <SectionHeading
+            eyebrow="Youtube"
+            title="영상으로 보는 자산관리"
+            description="강의와 상담에서 자주 다루는 주제를 영상으로 풀었습니다."
+          />
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {videos.map((v) => (
+              <div key={v.id} className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+                <div className="aspect-video bg-slate-100 [&_lite-youtube]:max-w-none">
+                  <YouTubeEmbed videoid={v.id} params="rel=0" />
+                </div>
+                <div className="p-5">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-gold-600">
+                    {v.topic}
+                  </p>
+                  <h3 className="mt-2 break-keep text-base font-bold leading-snug text-navy-950">
+                    {v.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <a
+              href={site.sns.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-navy-950 hover:bg-slate-100 transition-colors duration-200"
+            >
+              유튜브 채널 전체 보기
+            </a>
+          </div>
+        </div>
+      </section>
       {/* CEO teaser */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2">

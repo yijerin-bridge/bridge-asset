@@ -1678,6 +1678,12 @@ export const insights: Insight[] = [
           "20대의 과제가 습관과 구조를 만드는 것이었다면, 30대는 들어오는 돈과 나가는 돈이 동시에 커지는 시기입니다.",
           "그래서 30대 재무설계는 키우기와 지키기의 균형 문제가 됩니다. 한쪽만 하면 탈이 납니다. 키우기만 하면 가족에게 생길 공백을 막지 못하고, 지키기만 하면 가장 많이 벌 수 있는 시기를 흘려보냅니다.",
         ],
+        sources: [
+          {
+            label: "앞 단계가 궁금하다면 — 20대 재무설계, 시간이 곧 원금입니다",
+            href: "/insights/twenties-financial-planning",
+          },
+        ],
       },
       {
         heading: "30대의 돈은 어디로 가는가",
@@ -3008,6 +3014,12 @@ export const insights: Insight[] = [
         bullets: [
           "위험자산 비중은 100에서 나이를 뺀 값 — 20대라면 80% 안팎이 출발점입니다. 절대 규칙이 아니라 기준점이니 상황에 맞게 조정합니다.",
           "통화도 나눕니다 — 원화에만 몰리지 않도록 투자액의 일부를 달러 자산으로 가져갑니다.",
+        ],
+        sources: [
+          {
+            label: "30대가 되면 무엇이 달라지나 — 30대 재무설계, 키우기와 지키기",
+            href: "/insights/thirties-financial-planning",
+          },
         ],
         image: {
           src: "/images/insights/library/planning-notebook.webp",
