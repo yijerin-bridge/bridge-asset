@@ -10,9 +10,9 @@ export const videos: Video[] = [
     topic: "자산관리 강의",
   },
   {
-    id: "xurf1AGvsH8",
-    title: "투자자 입장에서 본 단기납 종신보험, 논란 종결",
-    topic: "보험",
+    id: "BkqVkhhHniY",
+    title: "경기침체기에 설립된 유니콘기업",
+    topic: "스타트업 투자",
   },
   {
     id: "PMEBiMONfZY",
