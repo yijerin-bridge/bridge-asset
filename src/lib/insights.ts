@@ -1669,7 +1669,7 @@ export const insights: Insight[] = [
       "절세 계좌 순서",
     ],
     date: "2026-10-02",
-    status: "draft",
+    status: "published",
     lead: "30대 재무설계의 과제는 하나가 아니라 둘입니다. 소득이 본격적으로 늘어나는 동시에 결혼·출산·주택처럼 큰돈 쓸 일이 몰리는 시기라, 자산을 키우는 일과 지키는 일을 함께 해야 합니다.",
     sections: [
       {
