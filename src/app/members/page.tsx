@@ -55,7 +55,7 @@ function MemberCard({
         )}
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <p className="text-xs font-semibold uppercase tracking-widest text-gold-600">
+        <p className="text-sm font-medium text-slate-500">
           {role}
         </p>
         <h3 className="mt-1 text-xl font-bold text-navy-950">{name}</h3>
@@ -91,7 +91,6 @@ export default function MembersPage() {
       />
 
       <PageHeader
-        eyebrow="Members"
         title="브릿지자산관리 멤버"
         description="고객의 더 나은 삶의 가능성을 함께 열어가는 자산관리 전문가들을 소개합니다."
       />
@@ -117,7 +116,7 @@ export default function MembersPage() {
               />
             </div>
             <div className="flex flex-1 flex-col p-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-600">
+              <p className="text-sm font-medium text-slate-500">
                 {recruit.role}
               </p>
               <h3 className="mt-1 text-xl font-bold text-navy-950">

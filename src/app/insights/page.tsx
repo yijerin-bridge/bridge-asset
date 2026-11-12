@@ -28,7 +28,6 @@ export default function InsightsPage() {
         ])}
       />
       <PageHeader
-        eyebrow="Insights"
         title="자산관리 인사이트"
         description="역외보험·달러자산, 스타트업 투자, 상속·연금까지. 판매가 아닌 진단의 관점에서 자산관리 전문가가 직접 정리합니다."
       />

@@ -61,21 +61,10 @@ export default function HomePage() {
         />
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-28 sm:py-36">
-          <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-gold-400 sm:text-sm">
-            <Image
-              src="/images/logo-mark.png"
-              alt=""
-              width={112}
-              height={45}
-              className="h-8 w-auto brightness-0 invert"
-              priority
-            />
-            {site.nameEn}
-          </p>
-          <h1 className="mt-6 max-w-3xl break-keep text-[2rem] font-bold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl break-keep text-[2rem] font-bold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">
             글로벌 자산관리의 전문가,
             <br />
-            <span className="text-gold-400">브릿지자산관리</span>
+            브릿지자산관리
           </h1>
           <p className="mt-6 max-w-2xl break-keep text-base leading-relaxed text-slate-200 sm:text-lg">
             주식·펀드부터 역외투자, 퇴직연금, 스타트업, 부동산, 보험까지.
@@ -112,7 +101,6 @@ export default function HomePage() {
       {/* Mission */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <SectionHeading
-          eyebrow="Our Mission"
           title="평생 함께하는 자산관리 파트너"
           description="판매가 아닌 성과로, 고객의 자산을 오랜 시간 곁에서 관리합니다. 고객의 경제적 자유와 신뢰 기반의 금융이 브릿지자산관리가 존재하는 이유입니다."
         />
@@ -148,7 +136,6 @@ export default function HomePage() {
       <section className="bg-white border-y border-slate-200">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
           <SectionHeading
-            eyebrow="Services"
             title="8개 자산 영역을 하나의 전략으로"
             description="자산은 따로 움직이지 않습니다. 8개 영역을 하나의 포트폴리오 관점에서 통합 설계합니다."
           />
@@ -163,7 +150,6 @@ export default function HomePage() {
       {/* Investment programs */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <SectionHeading
-          eyebrow="Programs"
           title="대표 투자 프로그램"
           description="장기 적립식부터 소득공제, 멀티커런시까지 목적에 맞는 프로그램을 운영합니다."
         />
@@ -204,7 +190,6 @@ export default function HomePage() {
       <section className="bg-white border-y border-slate-200">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
           <SectionHeading
-            eyebrow="Youtube"
             title="영상으로 보는 자산관리"
             description="강의와 상담에서 자주 다루는 주제를 영상으로 풀었습니다."
           />
@@ -215,7 +200,7 @@ export default function HomePage() {
                   <YouTubeEmbed videoid={v.id} params="rel=0" />
                 </div>
                 <div className="p-5">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-gold-600">
+                  <p className="text-xs font-medium text-slate-500">
                     {v.topic}
                   </p>
                   <h3 className="mt-2 break-keep text-base font-bold leading-snug text-navy-950">
@@ -243,7 +228,6 @@ export default function HomePage() {
           <div>
             <SectionHeading
               align="left"
-              eyebrow="About"
               title={`"${ceoProfile.headline}"`}
               description={ceoProfile.intro}
             />
@@ -282,7 +266,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-gold-600">
+            <h3 className="text-base font-bold text-navy-950">
               보유 자격
             </h3>
             <ul className="mt-4 flex flex-wrap gap-2">
@@ -302,7 +286,7 @@ export default function HomePage() {
       {/* FAQ */}
       <section className="bg-white border-y border-slate-200">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 py-20">
-          <SectionHeading eyebrow="FAQ" title="자주 묻는 질문" />
+          <SectionHeading title="자주 묻는 질문" />
           <dl className="mt-10 space-y-4">
             {faqs.map((f) => (
               <div

@@ -73,7 +73,6 @@ export default function ContactPage() {
       />
 
       <PageHeader
-        eyebrow="Contact"
         title="상담 신청"
         description="현재 자산 구조와 재무 목표를 정리하고, 실행 가능한 다음 단계를 제시합니다."
       />

@@ -220,7 +220,7 @@ export default async function MemberDetailPage({ params }: Props) {
               개인투자조합 GP·CO-GP로 운용 중인 투자와 개인 엔젤·LP 투자입니다.
             </p>
 
-            <h3 className="mt-8 text-sm font-semibold uppercase tracking-widest text-gold-600">
+            <h3 className="mt-8 text-lg font-bold text-navy-950">
               투자조합 운용 (GP / CO-GP / LP)
             </h3>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -246,7 +246,7 @@ export default async function MemberDetailPage({ params }: Props) {
               ))}
             </ul>
 
-            <h3 className="mt-10 text-sm font-semibold uppercase tracking-widest text-gold-600">
+            <h3 className="mt-10 text-lg font-bold text-navy-950">
               개인 엔젤·LP 투자
             </h3>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

@@ -29,7 +29,6 @@ export default function PortfolioPage() {
       />
 
       <PageHeader
-        eyebrow="Portfolio (GP / LP)"
         title="함께 성장한 투자 포트폴리오"
         description="개인투자조합 GP로서, 그리고 엔젤투자자로서 초기 스타트업부터 Pre-IPO까지 투자해 왔습니다. 코스닥·나스닥 IPO 엑싯 경험을 보유하고 있습니다."
       />
@@ -38,7 +37,6 @@ export default function PortfolioPage() {
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <SectionHeading
           align="left"
-          eyebrow="Investment Funds"
           title="투자조합 운용 현황"
           description="브릿지 이노베이션 투자조합 등 GP/CO-GP/LP로 운용·참여 중인 투자 건입니다."
         />
@@ -59,8 +57,8 @@ export default function PortfolioPage() {
                   />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center bg-navy-950">
-                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold-500">
-                      Coming Soon
+                    <span className="text-sm font-medium text-slate-300">
+                      준비 중
                     </span>
                   </div>
                 )}
@@ -91,7 +89,6 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
           <SectionHeading
             align="left"
-            eyebrow="Investment Programs"
             title="투자 프로그램"
             description="고객 성향과 목적에 맞춰 운영하는 대표 투자 프로그램입니다."
           />

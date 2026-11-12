@@ -72,12 +72,11 @@ export default function AboutPage() {
 
       {/* Hero */}
       <PageHeader
-        eyebrow="About Us"
         title={
           <>
             글로벌 자산관리의 전문가,
             <br />
-            <span className="text-gold-400">브릿지자산관리</span>
+            브릿지자산관리
           </>
         }
         description={`${site.legalName}는 증권·부동산·스타트업·보험 등 다양한 금융 분야를 아우르며, 고객 한 분 한 분의 자산을 자산배분의 원칙 위에서 설계하고 관리하는 종합 자산관리 회사입니다.`}
@@ -86,7 +85,6 @@ export default function AboutPage() {
       {/* Mission */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <SectionHeading
-          eyebrow="Mission"
           title="우리가 존재하는 이유"
           description="브릿지자산관리는 세 가지 미션 위에서 움직입니다."
         />
@@ -108,10 +106,7 @@ export default function AboutPage() {
       {/* Vision */}
       <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gold-400">
-            Vision
-          </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="break-keep text-3xl font-bold tracking-tight text-white sm:text-4xl">
             자산관리의 명가를 향해
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-300">
@@ -124,7 +119,6 @@ export default function AboutPage() {
       {/* Principles */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <SectionHeading
-          eyebrow="Principles"
           title="투자 원칙"
           description="브릿지자산관리가 자산을 다루는 방식입니다."
         />
@@ -147,7 +141,6 @@ export default function AboutPage() {
       <section className="bg-white border-y border-slate-200">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
           <SectionHeading
-            eyebrow="Business"
             title="8개 사업영역"
             description="자산은 따로 움직이지 않습니다. 8개 영역을 하나의 포트폴리오 관점에서 통합 관리합니다."
           />
@@ -192,7 +185,6 @@ export default function AboutPage() {
         <div className="grid gap-10 lg:grid-cols-2">
           <SectionHeading
             align="left"
-            eyebrow="Company"
             title="회사 정보"
             description="브릿지자산관리는 경기도 수원시 영통구에 위치하고 있습니다."
           />

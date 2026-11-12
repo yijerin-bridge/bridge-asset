@@ -27,7 +27,6 @@ export default function ServicesPage() {
         ])}
       />
       <PageHeader
-        eyebrow="Services"
         title="8개 자산 영역, 하나의 전략"
         description="자산관리는 상품 판매가 아니라 설계입니다. 고객의 재무 목표에서 출발해 8개 자산 영역을 하나의 포트폴리오로 통합합니다."
       />
