@@ -38,7 +38,7 @@ function MemberCard({
   return (
     <Link
       href={`/members/${slug}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-navy-600 hover:shadow-md transition-all duration-200 cursor-pointer"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-ink-600 hover:shadow-md transition-all duration-200 cursor-pointer"
     >
       <div className="relative aspect-square overflow-hidden bg-slate-100">
         <Image
@@ -49,7 +49,7 @@ function MemberCard({
           className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
         />
         {ceo && (
-          <span className="absolute left-4 top-4 rounded-full bg-gold-500 px-3 py-1 text-xs font-bold text-navy-950 shadow">
+          <span className="absolute left-4 top-4 rounded-full bg-ink-950 px-3 py-1 text-xs font-bold text-white shadow">
             CEO
           </span>
         )}
@@ -58,11 +58,11 @@ function MemberCard({
         <p className="text-sm font-medium text-slate-500">
           {role}
         </p>
-        <h3 className="mt-1 text-xl font-bold text-navy-950">{name}</h3>
+        <h3 className="mt-1 text-xl font-bold text-ink-950">{name}</h3>
         <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
           &ldquo;{quote}&rdquo;
         </p>
-        <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-navy-700 group-hover:text-gold-600 transition-colors duration-200">
+        <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-ink-700 group-hover:text-point-600 transition-colors duration-200">
           상세 프로필
           <svg
             className="h-4 w-4"
@@ -104,7 +104,7 @@ export default function MembersPage() {
           {/* 채용 카드 */}
           <Link
             href="/contact"
-            className="group flex flex-col overflow-hidden rounded-2xl border border-dashed border-slate-300 bg-slate-50 shadow-sm hover:border-navy-600 hover:bg-white transition-all duration-200 cursor-pointer"
+            className="group flex flex-col overflow-hidden rounded-2xl border border-dashed border-slate-300 bg-slate-50 shadow-sm hover:border-ink-600 hover:bg-white transition-all duration-200 cursor-pointer"
           >
             <div className="relative aspect-square overflow-hidden bg-slate-100">
               <Image
@@ -119,13 +119,13 @@ export default function MembersPage() {
               <p className="text-sm font-medium text-slate-500">
                 {recruit.role}
               </p>
-              <h3 className="mt-1 text-xl font-bold text-navy-950">
+              <h3 className="mt-1 text-xl font-bold text-ink-950">
                 자산관리사 지원하기
               </h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
                 &ldquo;{recruit.quote}&rdquo;
               </p>
-              <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-navy-700 group-hover:text-gold-600 transition-colors duration-200">
+              <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-ink-700 group-hover:text-point-600 transition-colors duration-200">
                 지원 문의하기
                 <svg
                   className="h-4 w-4"
@@ -144,7 +144,7 @@ export default function MembersPage() {
 
         <p className="mt-10 text-center text-sm text-slate-500">
           더 자세한 대표 프로필과 경력은{" "}
-          <Link href="/about" className="font-medium text-navy-700 underline hover:text-gold-600">
+          <Link href="/about" className="font-medium text-ink-700 underline hover:text-point-600">
             회사소개
           </Link>
           에서 확인하실 수 있습니다.

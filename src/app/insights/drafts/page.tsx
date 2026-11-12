@@ -17,7 +17,7 @@ export default function DraftsPage() {
         검토 후 <b>발행 · 수정 · 삭제</b>를 요청하세요.
       </div>
 
-      <h1 className="mt-8 text-3xl font-bold tracking-tight text-navy-950">
+      <h1 className="mt-8 text-3xl font-bold tracking-tight text-ink-950">
         초안 ({sorted.length})
       </h1>
 
@@ -29,15 +29,15 @@ export default function DraftsPage() {
             <li key={a.slug}>
               <Link
                 href={`/insights/${a.slug}`}
-                className="group flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm hover:border-navy-600 hover:shadow-md transition-all duration-200"
+                className="group flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm hover:border-ink-600 hover:shadow-md transition-all duration-200"
               >
                 <div>
                   <div className="flex items-center gap-2 text-xs">
                     <span className="rounded-full bg-amber-100 px-2 py-0.5 font-semibold text-amber-700">초안</span>
-                    <span className="rounded-full bg-navy-50 px-2 py-0.5 font-semibold text-navy-700">{a.category}</span>
+                    <span className="rounded-full bg-ink-50 px-2 py-0.5 font-semibold text-ink-700">{a.category}</span>
                     <span className="text-slate-400">{a.date}</span>
                   </div>
-                  <h2 className="mt-2 font-bold text-navy-950 group-hover:text-navy-700">{a.title}</h2>
+                  <h2 className="mt-2 font-bold text-ink-950 group-hover:text-ink-700">{a.title}</h2>
                   <p className="mt-1 text-xs text-slate-500">slug: {a.slug}</p>
                 </div>
                 <svg className="h-5 w-5 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">

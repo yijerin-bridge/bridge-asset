@@ -56,21 +56,21 @@ export default function PortfolioPage() {
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 ) : (
-                  <div className="flex h-full w-full items-center justify-center bg-navy-950">
+                  <div className="flex h-full w-full items-center justify-center bg-ink-950">
                     <span className="text-sm font-medium text-slate-300">
                       준비 중
                     </span>
                   </div>
                 )}
                 {f.highlight && (
-                  <span className="absolute left-3 top-3 rounded-full bg-gold-500 px-2.5 py-1 text-xs font-bold text-navy-950 shadow">
+                  <span className="absolute left-3 top-3 rounded-full bg-ink-950 px-2.5 py-1 text-xs font-bold text-white shadow">
                     {f.highlight}
                   </span>
                 )}
               </div>
               <div className="flex flex-1 flex-col p-5">
-                <h3 className="font-bold text-navy-950 leading-snug">{f.name}</h3>
-                <p className="mt-1 text-xs font-medium text-gold-600">
+                <h3 className="font-bold text-ink-950 leading-snug">{f.name}</h3>
+                <p className="mt-1 text-xs font-medium text-point-600">
                   {f.status === "preparing"
                     ? `${f.date} · ${f.role}`
                     : `${f.date} 투자 (${f.role})`}
@@ -108,10 +108,10 @@ export default function PortfolioPage() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <h3 className="font-bold text-navy-950 leading-snug">
+                  <h3 className="font-bold text-ink-950 leading-snug">
                     {p.name}
                   </h3>
-                  <p className="mt-1 text-xs font-medium text-gold-600">
+                  <p className="mt-1 text-xs font-medium text-point-600">
                     {p.period}
                   </p>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">

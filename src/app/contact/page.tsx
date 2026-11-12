@@ -78,15 +78,15 @@ export default function ContactPage() {
       />
 
       <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-16">
-        <h2 className="text-center text-2xl font-bold tracking-tight text-navy-950">상담료 안내</h2>
+        <h2 className="text-center text-2xl font-bold tracking-tight text-ink-950">상담료 안내</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
             <p className="text-sm font-semibold text-slate-600">자산관리 상담</p>
-            <p className="mt-2 text-3xl font-bold text-navy-950">20만원</p>
+            <p className="mt-2 text-3xl font-bold text-ink-950">20만원</p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
             <p className="text-sm font-semibold text-slate-600">만 30세 이하 사회초년생</p>
-            <p className="mt-2 text-3xl font-bold text-navy-950">5만원</p>
+            <p className="mt-2 text-3xl font-bold text-ink-950">5만원</p>
           </div>
         </div>
         <p className="mt-4 text-center text-sm text-slate-500">
@@ -96,7 +96,7 @@ export default function ContactPage() {
 
       <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-16">
         <div className="mb-6 text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-navy-950">상담 신청서</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-ink-950">상담 신청서</h2>
           <p className="mt-2 text-sm text-slate-600">아래 양식을 남겨주시면 담당자가 연락드립니다.</p>
         </div>
         <ConsultForm />
@@ -109,7 +109,7 @@ export default function ContactPage() {
               key={c.title}
               className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy-50 text-navy-700">
+              <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-ink-50 text-ink-700">
                 <svg
                   className="h-6 w-6"
                   fill="none"
@@ -121,9 +121,9 @@ export default function ContactPage() {
                   {c.icon}
                 </svg>
               </span>
-              <h2 className="mt-4 text-lg font-bold text-navy-950">{c.title}</h2>
+              <h2 className="mt-4 text-lg font-bold text-ink-950">{c.title}</h2>
               <p className="mt-1 text-sm text-slate-500">{c.desc}</p>
-              <p className="mt-2 flex-1 text-sm font-medium text-navy-800 break-all">
+              <p className="mt-2 flex-1 text-sm font-medium text-ink-800 break-all">
                 {c.value}
               </p>
               <a
@@ -131,7 +131,7 @@ export default function ContactPage() {
                 {...(c.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
-                className="mt-5 inline-flex justify-center rounded-md bg-navy-950 px-4 py-2.5 text-sm font-semibold text-white hover:bg-navy-800 transition-colors duration-200"
+                className="mt-5 inline-flex justify-center rounded-md bg-ink-950 px-4 py-2.5 text-sm font-semibold text-white hover:bg-ink-800 transition-colors duration-200"
               >
                 {c.action}
               </a>
@@ -142,16 +142,16 @@ export default function ContactPage() {
         {/* Office info */}
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <div className="rounded-xl border border-slate-200 bg-white p-8 shadow-sm">
-            <h2 className="text-lg font-bold text-navy-950">오시는 길</h2>
+            <h2 className="text-lg font-bold text-ink-950">오시는 길</h2>
             <address className="mt-4 not-italic text-sm leading-relaxed text-slate-600">
-              <p className="font-medium text-navy-800">{site.legalName}</p>
+              <p className="font-medium text-ink-800">{site.legalName}</p>
               <p className="mt-1">{site.address.full}</p>
             </address>
             <a
               href={`https://map.naver.com/p/search/${encodeURIComponent(site.address.full)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center gap-1 rounded-md border border-slate-300 px-4 py-2.5 text-sm font-medium text-navy-800 hover:border-navy-600 hover:bg-navy-50 transition-colors duration-200"
+              className="mt-5 inline-flex items-center gap-1 rounded-md border border-slate-300 px-4 py-2.5 text-sm font-medium text-ink-800 hover:border-ink-600 hover:bg-ink-50 transition-colors duration-200"
             >
               네이버 지도에서 보기
               <svg
@@ -170,8 +170,8 @@ export default function ContactPage() {
               </svg>
             </a>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-navy-50 p-8">
-            <h2 className="text-lg font-bold text-navy-950">상담 전 준비하면 좋아요</h2>
+          <div className="rounded-xl border border-slate-200 bg-ink-50 p-8">
+            <h2 className="text-lg font-bold text-ink-950">상담 전 준비하면 좋아요</h2>
             <ul className="mt-4 space-y-3 text-sm text-slate-700">
               {[
                 "현재 보유 자산 현황 (예금·주식·연금·보험·부동산 등)",
@@ -181,7 +181,7 @@ export default function ContactPage() {
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3">
                   <svg
-                    className="mt-0.5 h-5 w-5 shrink-0 text-gold-600"
+                    className="mt-0.5 h-5 w-5 shrink-0 text-point-600"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={2}

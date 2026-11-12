@@ -32,7 +32,7 @@ const snsLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-950 text-slate-300">
+    <footer className="bg-ink-950 text-slate-300">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-12">
         <div className="grid gap-10 md:grid-cols-3">
           <div>

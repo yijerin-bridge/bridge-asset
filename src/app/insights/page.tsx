@@ -41,21 +41,21 @@ export default function InsightsPage() {
               <li key={a.slug}>
                 <Link
                   href={`/insights/${a.slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:border-navy-600 hover:shadow-md transition-all duration-200 cursor-pointer"
+                  className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:border-ink-600 hover:shadow-md transition-all duration-200 cursor-pointer"
                 >
                   <div className="flex items-center gap-2 text-xs">
-                    <span className="rounded-full bg-navy-50 px-2.5 py-1 font-semibold text-navy-700">
+                    <span className="rounded-full bg-ink-50 px-2.5 py-1 font-semibold text-ink-700">
                       {a.category}
                     </span>
                     <span className="text-slate-400">{a.date}</span>
                   </div>
-                  <h2 className="mt-4 text-lg font-bold leading-snug text-navy-950 group-hover:text-navy-700">
+                  <h2 className="mt-4 text-lg font-bold leading-snug text-ink-950 group-hover:text-ink-700">
                     {a.title}
                   </h2>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600 line-clamp-3">
                     {a.description}
                   </p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-navy-700 group-hover:text-gold-600 transition-colors duration-200">
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-ink-700 group-hover:text-point-600 transition-colors duration-200">
                     읽어보기
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />

@@ -46,7 +46,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         ])}
       />
 
-      <section className="bg-navy-950">
+      <section className="bg-ink-950">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
           <nav aria-label="브레드크럼" className="text-sm text-slate-400">
             <ol className="flex flex-wrap items-center gap-2">
@@ -62,13 +62,13 @@ export default async function ServiceDetailPage({ params }: Props) {
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li aria-current="page" className="text-gold-400">
+              <li aria-current="page" className="text-point-400">
                 {service.title}
               </li>
             </ol>
           </nav>
           <div className="mt-8 flex items-start gap-5">
-            <span className="hidden sm:flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-white/10 text-gold-400">
+            <span className="hidden sm:flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-white/10 text-point-400">
               <ServiceIcon path={service.icon} className="h-8 w-8" />
             </span>
             <div>
@@ -84,7 +84,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-16">
-        <h2 className="text-2xl font-bold text-navy-950">이런 것을 도와드립니다</h2>
+        <h2 className="text-2xl font-bold text-ink-950">이런 것을 도와드립니다</h2>
         <ul className="mt-8 grid gap-4 sm:grid-cols-2">
           {service.points.map((p) => (
             <li
@@ -92,7 +92,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
             >
               <svg
-                className="mt-0.5 h-5 w-5 shrink-0 text-gold-600"
+                className="mt-0.5 h-5 w-5 shrink-0 text-point-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
@@ -107,15 +107,15 @@ export default async function ServiceDetailPage({ params }: Props) {
         </ul>
 
         <div className="mt-16">
-          <h2 className="text-xl font-bold text-navy-950">다른 서비스도 살펴보세요</h2>
+          <h2 className="text-xl font-bold text-ink-950">다른 서비스도 살펴보세요</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {others.map((o) => (
               <Link
                 key={o.slug}
                 href={`/services/${o.slug}`}
-                className="group rounded-xl border border-slate-200 bg-white p-5 shadow-sm hover:border-navy-600 hover:shadow-md transition-all duration-200 cursor-pointer"
+                className="group rounded-xl border border-slate-200 bg-white p-5 shadow-sm hover:border-ink-600 hover:shadow-md transition-all duration-200 cursor-pointer"
               >
-                <h3 className="font-semibold text-navy-950 group-hover:text-navy-700">
+                <h3 className="font-semibold text-ink-950 group-hover:text-ink-700">
                   {o.title}
                 </h3>
                 <p className="mt-1 text-sm text-slate-600">{o.short}</p>

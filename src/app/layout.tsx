@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { site } from "@/lib/site";
 import Header from "@/components/Header";
@@ -13,6 +14,14 @@ const notoSansKr = Noto_Sans_KR({
   variable: "--font-noto-sans-kr",
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
+  display: "swap",
+});
+
+// 본문·제목 기본 글꼴: Pretendard (한글 웹 표준에 가까운 산세리프). Noto Sans KR은 대체 글꼴로 남김
+const pretendard = localFont({
+  src: "../../node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2",
+  variable: "--font-pretendard",
+  weight: "45 920",
   display: "swap",
 });
 
@@ -81,7 +90,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={`${notoSansKr.variable} h-full antialiased`}>
+    <html lang="ko" className={`${pretendard.variable} ${notoSansKr.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <GoogleTagManager gtmId="GTM-P7PNGGJZ" />
         <noscript>

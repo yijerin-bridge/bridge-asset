@@ -39,70 +39,63 @@ export default function HomePage() {
     <>
       <JsonLd data={faqJsonLd(faqs)} />
 
-      {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-navy-950">
-        {/* 배경 사진 */}
+      {/* Hero — 시안 C: 화면을 채운 야경 위에 큰 제목 */}
+      <section className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-ink-950 text-white">
         <Image
           src="/images/hero-skyline.webp"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
-        />
-        {/* 글자 가독성을 위한 오버레이 — 왼쪽을 더 어둡게 깔아 본문을 받칩니다 */}
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/85 to-navy-950/45"
-          aria-hidden="true"
+          className="-z-10 object-cover object-[center_58%]"
         />
         <div
-          className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy-950 to-transparent"
+          className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(11,11,12,0.55)_0%,rgba(11,11,12,0.15)_35%,rgba(11,11,12,0.8)_72%,#0b0b0c_100%)]"
           aria-hidden="true"
         />
 
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-28 sm:py-36">
-          <h1 className="max-w-3xl break-keep text-[2rem] font-bold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            글로벌 자산관리의 전문가,
-            <br />
-            브릿지자산관리
-          </h1>
-          <p className="mt-6 max-w-2xl break-keep text-base leading-relaxed text-slate-200 sm:text-lg">
-            주식·펀드부터 역외투자, 퇴직연금, 스타트업, 부동산, 보험까지.
-            고객의 경제적 자유를 향한 가교가 되겠습니다.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Link
-              href="/contact"
-              className="rounded-md bg-gold-500 px-6 py-3.5 text-base font-semibold text-navy-950 shadow-lg shadow-gold-500/20 hover:bg-gold-400 transition-colors duration-200"
-            >
-              상담 신청
-            </Link>
-            <Link
-              href="/services"
-              className="rounded-md border border-white/25 bg-white/5 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm hover:bg-white/15 transition-colors duration-200"
-            >
-              사업영역 보기
-            </Link>
-          </div>
-
-          <dl className="mt-16 grid grid-cols-2 gap-3 sm:mt-20 sm:grid-cols-4 sm:gap-4">
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className="rounded-xl border border-white/15 bg-white/10 p-5 backdrop-blur-md"
+        <div className="mx-auto flex w-full max-w-6xl flex-1 items-end px-4 pb-12 pt-32 sm:px-6 sm:pb-16">
+          <div className="w-full">
+            <h1 className="max-w-4xl break-keep text-[2.75rem] font-bold leading-[1.06] tracking-[-0.05em] sm:text-7xl lg:text-8xl">
+              평생 함께하는
+              <br />
+              자산관리 파트너
+            </h1>
+            <p className="mt-6 max-w-2xl break-keep text-base leading-relaxed text-white/80 sm:text-xl">
+              판매가 아닌 성과로, 고객의 자산을 오랜 시간 곁에서 관리합니다.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex h-13 items-center bg-white px-7 text-base font-semibold text-ink-950 transition-colors duration-200 hover:bg-ink-100"
               >
-                <dd className="text-2xl font-bold text-white">{s.value}</dd>
-                <dt className="mt-1 block text-sm text-slate-300">{s.label}</dt>
-              </div>
-            ))}
-          </dl>
-        </div>      </section>
+                상담 신청
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex h-13 items-center border border-white/50 px-7 text-base font-semibold text-white transition-colors duration-200 hover:bg-white/10"
+              >
+                사업영역 보기
+              </Link>
+            </div>
+
+            <dl className="mt-14 grid grid-cols-2 gap-y-6 border-t border-white/25 sm:mt-16 sm:grid-cols-4">
+              {stats.map((s) => (
+                <div key={s.label} className="flex flex-col-reverse pt-5">
+                  <dt className="mt-1 text-sm text-white/65">{s.label}</dt>
+                  <dd className="text-3xl font-bold tracking-[-0.03em] sm:text-4xl">{s.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
 
       {/* Mission */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <SectionHeading
-          title="평생 함께하는 자산관리 파트너"
-          description="판매가 아닌 성과로, 고객의 자산을 오랜 시간 곁에서 관리합니다. 고객의 경제적 자유와 신뢰 기반의 금융이 브릿지자산관리가 존재하는 이유입니다."
+          title="우리가 일하는 방식"
+          description="고객의 경제적 자유와 신뢰 기반의 금융이 브릿지자산관리가 존재하는 이유입니다."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
@@ -123,7 +116,7 @@ export default function HomePage() {
               key={v.title}
               className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
             >
-              <h3 className="text-lg font-bold text-navy-950">{v.title}</h3>
+              <h3 className="text-lg font-bold text-ink-950">{v.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 {v.desc}
               </p>
@@ -170,10 +163,10 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <h3 className="font-bold text-navy-950 leading-snug">
+                  <h3 className="font-bold text-ink-950 leading-snug">
                     {p.name}
                   </h3>
-                  <p className="mt-1 text-xs font-medium text-gold-600">
+                  <p className="mt-1 text-xs font-medium text-point-600">
                     {p.period}
                   </p>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
@@ -203,7 +196,7 @@ export default function HomePage() {
                   <p className="text-xs font-medium text-slate-500">
                     {v.topic}
                   </p>
-                  <h3 className="mt-2 break-keep text-base font-bold leading-snug text-navy-950">
+                  <h3 className="mt-2 break-keep text-base font-bold leading-snug text-ink-950">
                     {v.title}
                   </h3>
                 </div>
@@ -215,7 +208,7 @@ export default function HomePage() {
               href={site.sns.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-navy-950 hover:bg-slate-100 transition-colors duration-200"
+              className="inline-flex items-center gap-1 rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-ink-950 hover:bg-slate-100 transition-colors duration-200"
             >
               유튜브 채널 전체 보기
             </a>
@@ -235,7 +228,7 @@ export default function HomePage() {
               {ceoProfile.current.slice(0, 4).map((c) => (
                 <li key={c} className="flex items-start gap-2">
                   <svg
-                    className="mt-0.5 h-4 w-4 shrink-0 text-gold-600"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-point-600"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={2}
@@ -250,7 +243,7 @@ export default function HomePage() {
             </ul>
             <Link
               href="/members/yi-jaerin"
-              className="mt-8 inline-flex items-center gap-1 rounded-md bg-navy-950 px-5 py-3 text-sm font-semibold text-white hover:bg-navy-800 transition-colors duration-200"
+              className="mt-8 inline-flex items-center gap-1 rounded-md bg-ink-950 px-5 py-3 text-sm font-semibold text-white hover:bg-ink-800 transition-colors duration-200"
             >
               대표 프로필 전체 보기
               <svg
@@ -266,14 +259,14 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <h3 className="text-base font-bold text-navy-950">
+            <h3 className="text-base font-bold text-ink-950">
               보유 자격
             </h3>
             <ul className="mt-4 flex flex-wrap gap-2">
               {ceoProfile.certifications.map((c) => (
                 <li
                   key={c}
-                  className="rounded-full border border-navy-100 bg-navy-50 px-3 py-1.5 text-xs font-medium text-navy-800"
+                  className="rounded-full border border-ink-100 bg-ink-50 px-3 py-1.5 text-xs font-medium text-ink-800"
                 >
                   {c}
                 </li>
@@ -293,7 +286,7 @@ export default function HomePage() {
                 key={f.q}
                 className="rounded-xl border border-slate-200 bg-slate-50 p-6"
               >
-                <dt className="font-semibold text-navy-950">{f.q}</dt>
+                <dt className="font-semibold text-ink-950">{f.q}</dt>
                 <dd className="mt-2 text-sm leading-relaxed text-slate-600">
                   {f.a}
                 </dd>

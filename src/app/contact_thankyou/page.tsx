@@ -15,9 +15,9 @@ export default function ContactThankYouPage() {
   return (
     <>
       <ConsultComplete />
-      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800">
+      <section className="bg-gradient-to-br from-ink-950 via-ink-900 to-ink-800">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 py-20 text-center">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white/10 text-gold-400">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white/10 text-point-400">
             <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
             </svg>
@@ -33,7 +33,7 @@ export default function ContactThankYouPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-4 sm:px-6 py-16">
-        <h2 className="text-center text-2xl font-bold tracking-tight text-navy-950">
+        <h2 className="text-center text-2xl font-bold tracking-tight text-ink-950">
           이렇게 진행됩니다
         </h2>
         <ol className="mt-8 space-y-4">
@@ -58,11 +58,11 @@ export default function ContactThankYouPage() {
               key={x.step}
               className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
             >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy-950 text-sm font-bold text-white">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink-950 text-sm font-bold text-white">
                 {x.step}
               </span>
               <div>
-                <h3 className="font-bold text-navy-950">{x.title}</h3>
+                <h3 className="font-bold text-ink-950">{x.title}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-slate-600">{x.desc}</p>
               </div>
             </li>
@@ -70,12 +70,12 @@ export default function ContactThankYouPage() {
         </ol>
 
         <div className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <p className="text-sm font-semibold text-navy-950">급하게 문의하실 일이 있으면</p>
+          <p className="text-sm font-semibold text-ink-950">급하게 문의하실 일이 있으면</p>
           <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-700">
-            <a href={`tel:${site.phone.replace(/-/g, "")}`} className="hover:text-navy-950">
+            <a href={`tel:${site.phone.replace(/-/g, "")}`} className="hover:text-ink-950">
               전화 {site.phone}
             </a>
-            <a href={`mailto:${site.email}`} className="hover:text-navy-950">
+            <a href={`mailto:${site.email}`} className="hover:text-ink-950">
               이메일 {site.email}
             </a>
           </div>
@@ -86,19 +86,19 @@ export default function ContactThankYouPage() {
           <div className="mt-4 flex flex-wrap justify-center gap-3">
             <Link
               href="/insights"
-              className="rounded-md bg-navy-950 px-5 py-3 text-sm font-semibold text-white hover:bg-navy-800 transition-colors duration-200"
+              className="rounded-md bg-ink-950 px-5 py-3 text-sm font-semibold text-white hover:bg-ink-800 transition-colors duration-200"
             >
               인사이트 보기
             </Link>
             <Link
               href="/services"
-              className="rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-navy-950 hover:bg-slate-100 transition-colors duration-200"
+              className="rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-ink-950 hover:bg-slate-100 transition-colors duration-200"
             >
               사업영역 둘러보기
             </Link>
             <Link
               href="/"
-              className="rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-navy-950 hover:bg-slate-100 transition-colors duration-200"
+              className="rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-ink-950 hover:bg-slate-100 transition-colors duration-200"
             >
               홈으로
             </Link>

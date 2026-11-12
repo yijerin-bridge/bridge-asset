@@ -1,34 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #fafafa;
+  --foreground: #0b0b0c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-noto-sans-kr), "Apple SD Gothic Neo", "Malgun Gothic",
-    sans-serif;
+  --font-sans: var(--font-pretendard), var(--font-noto-sans-kr), "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
 
-  /* Brand: Trust navy + premium gold */
-  --color-navy-950: #0a1628;
-  --color-navy-900: #0f2038;
-  --color-navy-800: #16304f;
-  --color-navy-700: #1e3a5f;
-  --color-navy-600: #2c4f7c;
-  --color-navy-100: #dbe4f0;
-  --color-navy-50: #eef3f9;
-  --color-gold-600: #b8860b;
-  --color-gold-500: #ca8a04;
-  --color-gold-400: #d9a406;
-  --color-gold-100: #fdf3d7;
+  /* 브랜드: 블랙. ink = 검정~회색 단계 (이전 navy 자리) */
+  --color-ink-950: #0b0b0c;
+  --color-ink-900: #141416;
+  --color-ink-800: #1f1f22;
+  --color-ink-700: #2c2c30;
+  --color-ink-600: #48484e;
+  --color-ink-100: #e4e4e7;
+  --color-ink-50: #f4f4f5;
+
+  /* point = 무채색 포인트 (이전 gold 자리)
+     700·600: 밝은 바탕 위 강조 글자 / 500·400: 어두운 바탕 위 버튼·글자 / 100·50: 밝은 배지 바탕 */
+  --color-point-700: #18181b;
+  --color-point-600: #3f3f46;
+  --color-point-500: #ffffff;
+  --color-point-400: #e4e4e7;
+  --color-point-100: #ededee;
+  --color-point-50: #f6f6f7;
+}
+
+html,
+body {
+  overflow-x: clip;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  letter-spacing: -0.01em;
 }
 
 html {

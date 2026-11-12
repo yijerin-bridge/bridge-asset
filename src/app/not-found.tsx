@@ -6,7 +6,7 @@ export default function NotFound() {
       <p className="text-sm font-medium text-slate-500">
         404
       </p>
-      <h1 className="mt-3 text-3xl font-bold text-navy-950 sm:text-4xl">
+      <h1 className="mt-3 text-3xl font-bold text-ink-950 sm:text-4xl">
         페이지를 찾을 수 없습니다
       </h1>
       <p className="mt-4 text-slate-600">
@@ -14,7 +14,7 @@ export default function NotFound() {
       </p>
       <Link
         href="/"
-        className="mt-8 rounded-md bg-navy-950 px-6 py-3 text-sm font-semibold text-white hover:bg-navy-800 transition-colors duration-200"
+        className="mt-8 rounded-md bg-ink-950 px-6 py-3 text-sm font-semibold text-white hover:bg-ink-800 transition-colors duration-200"
       >
         홈으로 돌아가기
       </Link>

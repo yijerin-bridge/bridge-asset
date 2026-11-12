@@ -89,7 +89,7 @@ export default async function InsightPage({ params }: Props) {
 
       <article>
         {/* Hero */}
-        <section className="bg-navy-950">
+        <section className="bg-ink-950">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 py-16">
             <nav aria-label="브레드크럼" className="text-sm text-slate-400">
               <ol className="flex flex-wrap items-center gap-2">
@@ -99,7 +99,7 @@ export default async function InsightPage({ params }: Props) {
               </ol>
             </nav>
             <div className="mt-6 flex items-center gap-2 text-xs">
-              <span className="rounded-full bg-white/10 px-2.5 py-1 font-semibold text-gold-400">
+              <span className="rounded-full bg-white/10 px-2.5 py-1 font-semibold text-point-400">
                 {a.category}
               </span>
               <span className="text-slate-400">{a.date}</span>
@@ -123,7 +123,7 @@ export default async function InsightPage({ params }: Props) {
           )}
 
           {/* 직답 */}
-          <p className="border-l-4 border-gold-500 bg-navy-50 p-5 text-lg font-medium leading-relaxed text-navy-950">
+          <p className="border-l-4 border-ink-950 bg-ink-50 p-5 text-lg font-medium leading-relaxed text-ink-950">
             {a.lead}
           </p>
 
@@ -131,7 +131,7 @@ export default async function InsightPage({ params }: Props) {
             {a.sections.map((s, si) => (
               <Fragment key={s.heading}>
               <section>
-                <h2 className="text-xl font-bold text-navy-950">{s.heading}</h2>
+                <h2 className="text-xl font-bold text-ink-950">{s.heading}</h2>
                 {s.paragraphs?.map((p, i) => (
                   <p key={i} className="mt-3 text-base leading-relaxed text-slate-700">
                     {p}
@@ -153,9 +153,9 @@ export default async function InsightPage({ params }: Props) {
                     {s.cards.map((c) => (
                       <div key={c.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                         <div className="flex items-baseline justify-between gap-2">
-                          <h3 className="text-lg font-bold text-navy-950">{c.title}</h3>
+                          <h3 className="text-lg font-bold text-ink-950">{c.title}</h3>
                           {c.subtitle && (
-                            <span className="rounded-full bg-gold-100 px-2.5 py-1 text-xs font-semibold text-gold-600">
+                            <span className="rounded-full bg-point-100 px-2.5 py-1 text-xs font-semibold text-point-600">
                               {c.subtitle}
                             </span>
                           )}
@@ -163,7 +163,7 @@ export default async function InsightPage({ params }: Props) {
                         <ul className="mt-4 space-y-2">
                           {c.points.map((pt) => (
                             <li key={pt} className="flex items-start gap-2.5 text-sm leading-relaxed text-slate-700">
-                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-navy-600" aria-hidden="true" />
+                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-600" aria-hidden="true" />
                               {pt}
                             </li>
                           ))}
@@ -181,7 +181,7 @@ export default async function InsightPage({ params }: Props) {
                           href={src.href}
                           target={src.href.startsWith("/") ? undefined : "_blank"}
                           rel={src.href.startsWith("/") ? undefined : "noopener noreferrer"}
-                          className="font-medium text-navy-700 underline decoration-slate-300 underline-offset-2 hover:text-navy-950 hover:decoration-navy-600"
+                          className="font-medium text-ink-700 underline decoration-slate-300 underline-offset-2 hover:text-ink-950 hover:decoration-ink-600"
                         >
                           {src.label}
                         </a>
@@ -193,7 +193,7 @@ export default async function InsightPage({ params }: Props) {
                   <ul className="mt-4 space-y-2">
                     {s.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-3 text-base leading-relaxed text-slate-700">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" aria-hidden="true" />
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-950" aria-hidden="true" />
                         {b}
                       </li>
                     ))}
@@ -210,11 +210,11 @@ export default async function InsightPage({ params }: Props) {
           {/* FAQ */}
           {a.faqs.length > 0 && (
             <section className="mt-14">
-              <h2 className="text-xl font-bold text-navy-950">자주 묻는 질문</h2>
+              <h2 className="text-xl font-bold text-ink-950">자주 묻는 질문</h2>
               <dl className="mt-6 space-y-4">
                 {a.faqs.map((f) => (
                   <div key={f.q} className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                    <dt className="font-semibold text-navy-950">{f.q}</dt>
+                    <dt className="font-semibold text-ink-950">{f.q}</dt>
                     <dd className="mt-2 text-sm leading-relaxed text-slate-600">{f.a}</dd>
                   </div>
                 ))}
@@ -230,12 +230,12 @@ export default async function InsightPage({ params }: Props) {
 
           {others.length > 0 && (
             <div className="mt-14 border-t border-slate-200 pt-10">
-              <h2 className="text-lg font-bold text-navy-950">다른 인사이트</h2>
+              <h2 className="text-lg font-bold text-ink-950">다른 인사이트</h2>
               <ul className="mt-5 space-y-3">
                 {others.map((o) => (
                   <li key={o.slug}>
-                    <Link href={`/insights/${o.slug}`} className="group flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-navy-600 transition-colors duration-200">
-                      <span className="font-semibold text-navy-950 group-hover:text-navy-700">{o.title}</span>
+                    <Link href={`/insights/${o.slug}`} className="group flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-ink-600 transition-colors duration-200">
+                      <span className="font-semibold text-ink-950 group-hover:text-ink-700">{o.title}</span>
                       <span className="text-xs text-slate-400 shrink-0">{o.category}</span>
                     </Link>
                   </li>

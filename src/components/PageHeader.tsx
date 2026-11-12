@@ -12,7 +12,7 @@ export default function PageHeader({
   description?: ReactNode;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800">
+    <section className="relative isolate overflow-hidden bg-gradient-to-br from-ink-950 via-ink-900 to-ink-800">
       <Image
         src="/images/logo-mark.png"
         alt=""

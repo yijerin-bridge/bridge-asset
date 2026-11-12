@@ -34,12 +34,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function InfoBlock({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
-      <h2 className="text-lg font-bold text-navy-950">{title}</h2>
+      <h2 className="text-lg font-bold text-ink-950">{title}</h2>
       <ul className="mt-4 space-y-2">
         {items.map((c) => (
           <li key={c} className="flex items-start gap-3 text-sm text-slate-700">
             <span
-              className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500"
+              className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-950"
               aria-hidden="true"
             />
             {c}
@@ -82,7 +82,7 @@ export default async function MemberDetailPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="bg-navy-950">
+      <section className="bg-ink-950">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16">
           <nav aria-label="브레드크럼" className="text-sm text-slate-400">
             <ol className="flex flex-wrap items-center gap-2">
@@ -98,7 +98,7 @@ export default async function MemberDetailPage({ params }: Props) {
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li aria-current="page" className="text-gold-400">
+              <li aria-current="page" className="text-point-400">
                 {m.name}
               </li>
             </ol>
@@ -115,7 +115,7 @@ export default async function MemberDetailPage({ params }: Props) {
             />
             <div>
               {m.ceo && (
-                <span className="inline-block rounded-full bg-gold-500 px-3 py-1 text-xs font-bold text-navy-950">
+                <span className="inline-block rounded-full bg-point-500 px-3 py-1 text-xs font-bold text-ink-950">
                   CEO
                 </span>
               )}
@@ -123,7 +123,7 @@ export default async function MemberDetailPage({ params }: Props) {
                 {m.name}
               </h1>
               <p className="mt-1 text-sm text-slate-400">{m.nameEn}</p>
-              <p className="mt-3 text-base font-semibold text-gold-400">
+              <p className="mt-3 text-base font-semibold text-point-400">
                 {m.role}
               </p>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-slate-200">
@@ -139,11 +139,11 @@ export default async function MemberDetailPage({ params }: Props) {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
           <div>
             {m.philosophy && (
-              <p className="mb-6 border-l-4 border-gold-500 pl-4 text-xl font-bold leading-snug text-navy-950">
+              <p className="mb-6 border-l-4 border-ink-950 pl-4 text-xl font-bold leading-snug text-ink-950">
                 &ldquo;{m.philosophy}&rdquo;
               </p>
             )}
-            <h2 className="text-lg font-bold text-navy-950">소개</h2>
+            <h2 className="text-lg font-bold text-ink-950">소개</h2>
             <div className="mt-4 space-y-3 text-base leading-relaxed text-slate-700">
               {m.intro.map((p, i) => (
                 <p key={i}>{p}</p>
@@ -158,14 +158,14 @@ export default async function MemberDetailPage({ params }: Props) {
 
             {m.media && (
               <div className="mt-10">
-                <h2 className="text-lg font-bold text-navy-950">방송</h2>
+                <h2 className="text-lg font-bold text-ink-950">방송</h2>
                 <ul className="mt-4 space-y-2">
                   {m.media.map((x) => (
                     <li
                       key={x.title}
                       className="flex items-start gap-3 text-sm text-slate-700"
                     >
-                      <span className="mt-0.5 shrink-0 font-semibold text-gold-600">
+                      <span className="mt-0.5 shrink-0 font-semibold text-point-600">
                         {x.year}
                       </span>
                       {x.title}
@@ -177,11 +177,11 @@ export default async function MemberDetailPage({ params }: Props) {
 
             {m.sns && (
               <div className="mt-10">
-                <h2 className="text-lg font-bold text-navy-950">SNS</h2>
+                <h2 className="text-lg font-bold text-ink-950">SNS</h2>
                 <ul className="mt-4 space-y-2 text-sm text-slate-700">
                   {m.sns.map((s) => (
                     <li key={s.label} className="flex gap-2">
-                      <span className="font-semibold text-navy-800">
+                      <span className="font-semibold text-ink-800">
                         {s.label}
                       </span>
                       <span>{s.value}</span>
@@ -197,12 +197,12 @@ export default async function MemberDetailPage({ params }: Props) {
               <InfoBlock title="경력" items={m.career} />
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-              <h2 className="text-lg font-bold text-navy-950">자격</h2>
+              <h2 className="text-lg font-bold text-ink-950">자격</h2>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {m.certifications.map((c) => (
                   <li
                     key={c}
-                    className="rounded-full border border-navy-100 bg-white px-3 py-1.5 text-xs font-medium text-navy-800"
+                    className="rounded-full border border-ink-100 bg-white px-3 py-1.5 text-xs font-medium text-ink-800"
                   >
                     {c}
                   </li>
@@ -215,12 +215,12 @@ export default async function MemberDetailPage({ params }: Props) {
         {/* 투자 포트폴리오 (대표 전용) */}
         {m.ceo && (
           <div className="mt-16 border-t border-slate-200 pt-16">
-            <h2 className="text-2xl font-bold text-navy-950">투자 포트폴리오</h2>
+            <h2 className="text-2xl font-bold text-ink-950">투자 포트폴리오</h2>
             <p className="mt-2 text-sm text-slate-600">
               개인투자조합 GP·CO-GP로 운용 중인 투자와 개인 엔젤·LP 투자입니다.
             </p>
 
-            <h3 className="mt-8 text-lg font-bold text-navy-950">
+            <h3 className="mt-8 text-lg font-bold text-ink-950">
               투자조합 운용 (GP / CO-GP / LP)
             </h3>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -230,9 +230,9 @@ export default async function MemberDetailPage({ params }: Props) {
                   className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"
                 >
                   <div className="flex items-start justify-between gap-2">
-                    <span className="font-semibold text-navy-950">{f.name}</span>
+                    <span className="font-semibold text-ink-950">{f.name}</span>
                     {f.highlight && (
-                      <span className="shrink-0 rounded-full bg-gold-100 px-2 py-0.5 text-[11px] font-semibold text-gold-600">
+                      <span className="shrink-0 rounded-full bg-point-100 px-2 py-0.5 text-[11px] font-semibold text-point-600">
                         {f.highlight}
                       </span>
                     )}
@@ -246,7 +246,7 @@ export default async function MemberDetailPage({ params }: Props) {
               ))}
             </ul>
 
-            <h3 className="mt-10 text-lg font-bold text-navy-950">
+            <h3 className="mt-10 text-lg font-bold text-ink-950">
               개인 엔젤·LP 투자
             </h3>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -255,7 +255,7 @@ export default async function MemberDetailPage({ params }: Props) {
                   key={a.name}
                   className="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 shadow-sm"
                 >
-                  <span className="font-semibold text-navy-950">{a.name}</span>
+                  <span className="font-semibold text-ink-950">{a.name}</span>
                   <span className="text-right text-xs text-slate-500">
                     {a.note}
                   </span>
@@ -271,13 +271,13 @@ export default async function MemberDetailPage({ params }: Props) {
 
         {/* Other members */}
         <div className="mt-16">
-          <h2 className="text-xl font-bold text-navy-950">다른 멤버 보기</h2>
+          <h2 className="text-xl font-bold text-ink-950">다른 멤버 보기</h2>
           <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {others.map((o) => (
               <Link
                 key={o.slug}
                 href={`/members/${o.slug}`}
-                className="group flex flex-col items-center rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm hover:border-navy-600 hover:shadow-md transition-all duration-200 cursor-pointer"
+                className="group flex flex-col items-center rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm hover:border-ink-600 hover:shadow-md transition-all duration-200 cursor-pointer"
               >
                 <Image
                   src={o.image}
@@ -286,7 +286,7 @@ export default async function MemberDetailPage({ params }: Props) {
                   height={80}
                   className="h-20 w-20 rounded-full object-cover object-top"
                 />
-                <p className="mt-3 font-semibold text-navy-950">{o.name}</p>
+                <p className="mt-3 font-semibold text-ink-950">{o.name}</p>
                 <p className="mt-0.5 text-xs text-slate-500">{o.role}</p>
               </Link>
             ))}

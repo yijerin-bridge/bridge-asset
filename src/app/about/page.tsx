@@ -94,7 +94,7 @@ export default function AboutPage() {
               key={m.title}
               className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
             >
-              <h3 className="text-lg font-bold text-navy-950">{m.title}</h3>
+              <h3 className="text-lg font-bold text-ink-950">{m.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 {m.desc}
               </p>
@@ -104,7 +104,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision */}
-      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800">
+      <section className="bg-gradient-to-br from-ink-950 via-ink-900 to-ink-800">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20 text-center">
           <h2 className="break-keep text-3xl font-bold tracking-tight text-white sm:text-4xl">
             자산관리의 명가를 향해
@@ -128,7 +128,7 @@ export default function AboutPage() {
               key={p.title}
               className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
             >
-              <h3 className="text-lg font-bold text-navy-950">{p.title}</h3>
+              <h3 className="text-lg font-bold text-ink-950">{p.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 {p.desc}
               </p>
@@ -149,12 +149,12 @@ export default function AboutPage() {
               <li key={s.slug}>
                 <Link
                   href={`/services/${s.slug}`}
-                  className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-navy-600 hover:shadow-md transition-all duration-200 cursor-pointer"
+                  className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-ink-600 hover:shadow-md transition-all duration-200 cursor-pointer"
                 >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-navy-50 text-navy-700 group-hover:bg-navy-950 group-hover:text-gold-400 transition-colors duration-200">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ink-50 text-ink-700 group-hover:bg-ink-950 group-hover:text-point-400 transition-colors duration-200">
                     <ServiceIcon path={s.icon} className="h-5 w-5" />
                   </span>
-                  <span className="font-semibold text-navy-950">{s.title}</span>
+                  <span className="font-semibold text-ink-950">{s.title}</span>
                 </Link>
               </li>
             ))}
@@ -162,7 +162,7 @@ export default function AboutPage() {
           <div className="mt-8 text-center">
             <Link
               href="/services"
-              className="inline-flex items-center gap-1 rounded-md bg-navy-950 px-5 py-3 text-sm font-semibold text-white hover:bg-navy-800 transition-colors duration-200"
+              className="inline-flex items-center gap-1 rounded-md bg-ink-950 px-5 py-3 text-sm font-semibold text-white hover:bg-ink-800 transition-colors duration-200"
             >
               사업영역 자세히 보기
               <svg
@@ -194,14 +194,14 @@ export default function AboutPage() {
                 <dt className="w-28 shrink-0 text-sm font-semibold text-slate-500">
                   {row.label}
                 </dt>
-                <dd className="text-sm text-navy-900">{row.value}</dd>
+                <dd className="text-sm text-ink-900">{row.value}</dd>
               </div>
             ))}
           </dl>
         </div>
         <p className="mt-8 text-sm text-slate-500">
           대표 및 자산관리사 멤버 프로필은{" "}
-          <Link href="/members" className="font-medium text-navy-700 underline hover:text-gold-600">
+          <Link href="/members" className="font-medium text-ink-700 underline hover:text-point-600">
             멤버소개
           </Link>
           에서 확인하실 수 있습니다.

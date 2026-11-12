@@ -108,8 +108,8 @@ export default function PushToggle({ pw }: { pw: string }) {
           disabled={busy || state === "loading"}
           className={`rounded-full px-3 py-1.5 font-medium transition-colors ${
             state === "on"
-              ? "bg-navy-950 text-white hover:bg-navy-800"
-              : "bg-gold-500 text-navy-950 hover:bg-gold-400"
+              ? "bg-ink-950 text-white hover:bg-ink-800"
+              : "bg-ink-950 text-white hover:bg-ink-800"
           } disabled:opacity-50`}
         >
           {state === "on" ? "🔔 알림 켜짐 (끄기)" : "🔕 새 상담 알림 받기"}
