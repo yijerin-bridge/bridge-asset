@@ -46,7 +46,7 @@ export async function sendPushToAll(payload: {
   body: string;
   url?: string;
 }) {
-  if (!pushReady()) return { sent: 0, removed: 0 };
+  if (!pushReady()) return { sent: 0, removed: 0, errors: [] as number[] };
   configure();
   const subs = await loadSubs();
 
@@ -56,6 +56,7 @@ export async function sendPushToAll(payload: {
 
   let sent = 0;
   const dead: string[] = [];
+  const errors: number[] = [];
 
   await Promise.all(
     subs.map(async (s) => {
@@ -66,6 +67,7 @@ export async function sendPushToAll(payload: {
         const code = (e as { statusCode?: number }).statusCode;
         // 404/410 = 더 이상 유효하지 않은 구독
         if (code === 404 || code === 410) dead.push(s.endpoint);
+        else errors.push(code ?? 0);
       }
     })
   );
@@ -77,5 +79,5 @@ export async function sendPushToAll(payload: {
     for (const s of keep) await getRedis()!.rpush(PUSH_SUBS_KEY, JSON.stringify(s));
   }
 
-  return { sent, removed: dead.length };
+  return { sent, removed: dead.length, errors };
 }
