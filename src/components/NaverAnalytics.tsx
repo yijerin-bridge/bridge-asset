@@ -10,7 +10,7 @@ import Script from "next/script";
 // wa 값을 바꿔가며 순서대로 발화시킵니다. 함께 넣으면 뒤에 설정한 값이
 // 앞의 값을 덮어써서 한쪽이 수집되지 않습니다.
 const NA_ANALYTICS_KEY = "1c5afd7caa619c0";
-const NA_ADS_KEY = "s_520476d6c412";
+export const NA_ADS_KEY = "s_520476d6c412";
 const INFLOW_DOMAIN = "bridgeasset.kr";
 
 type Wcs = {
